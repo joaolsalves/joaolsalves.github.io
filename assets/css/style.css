@@ -1,0 +1,33 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0px;
+}
+
+.container-header{
+    display: flex;
+    position: fixed;
+    background: orange;
+    height: 60px;
+    width: 100%;
+    top: 0px;
+}
+
+.container{
+    display: flex;
+    height: 100vh;
+    background: blue;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.corpo-container{
+    display: flex;
+    height: 70vh;
+    width: 70vw;
+    background: white;
+    
+}
