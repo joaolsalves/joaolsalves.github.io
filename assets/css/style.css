@@ -31,3 +31,10 @@ body{
     background: white;
     
 }
+
+.container-bottom{
+    display: flex;
+    height: 70vh;
+    width: 100%;
+    background: green;
+}
