@@ -8,27 +8,50 @@ body{
 
 .container-header{
     display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: space-around;
+
     position: fixed;
-    background: orange;
+    background: #06283D;
     height: 60px;
     width: 100%;
     top: 0px;
 }
 
-.container{
+.container-logo{
+    flex-grow: 1;
+    width: 10vw;
+    background: orange;
+    text-align: center;
+}
+
+
+
+.container-center{
     display: flex;
-    height: 100vh;
-    background: blue;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    flex-direction: row;
+    width: 80vw;
+    flex-grow: 5;
+    justify-content: space-around;
+
+}
+
+.container-menu{
+    flex-grow: 1;
+    width: 10vw;
+    background: orange;
+    text-align: center;
+    
 }
 
 .corpo-container{
     display: flex;
-    height: 70vh;
-    width: 70vw;
-    background: white;
+    height: 80vh;
+    width: 80vw;
+    
+    background: #DFF6FF;
     
 }
 
@@ -36,5 +59,76 @@ body{
     display: flex;
     height: 70vh;
     width: 100%;
-    background: green;
+    background: #47B5FF;
+    
+}
+
+.container-home{
+    /* background: #1363DF; */
+    background: linear-gradient(180deg, green 50%,blue 50%);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-apresentacao{
+    /* background: #47B5FF; */
+    background: linear-gradient(0deg, green 50%,blue 50%);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-produtos{
+    /* background: #06283D; */
+    background: linear-gradient(180deg, green,blue);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-servicos{
+    /* background: #1363DF; */
+    background: linear-gradient(0deg, green,blue);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-portfolio{
+    /* background: #47B5FF; */
+    background: linear-gradient(180deg, green,blue);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-suporte{
+    /* background: #06283D; */
+    background: linear-gradient(0deg, green,blue);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-faleconosco{
+    /* background: #1363DF; */
+    background: linear-gradient(180deg, green,blue);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
