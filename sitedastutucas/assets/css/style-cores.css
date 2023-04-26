@@ -15,10 +15,18 @@ body{
     top: 0px;
 }
 
+.display-flex-alinhado{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .container-azul{
+    
     background: blue;
     height: 100vh;
     /* opacity: 0.5;  */
+    
 }
 
 .container-amarelo{
@@ -90,10 +98,12 @@ body{
 
 .bck-color-verde{
     background: green;
+    color: white;
 }
 
 .bck-color-roxo{
     background: purple;
+    color: white;
 }
 
 .bck-color-preto{
