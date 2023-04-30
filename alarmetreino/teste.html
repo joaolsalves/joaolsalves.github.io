@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exemplo de Keyframe - Abrir da Direita para a Esquerda</title>
+	<style>
+		.element{
+            position: absolute;
+            background: gray;
+           /*  right: -100px; */
+            width: 100px;
+            height: 100px;
+            animation: example 1s forwards/* ease-in-out */;
+            
+        }
+
+        .div-limitante{
+            position: fixed;
+            display: inline;
+            background: orange;
+            right: 0px; 
+            width: 1000px; 
+            /* overflow-y: hidden;    */
+        }
+
+        @keyframes example {
+            0% {
+            background-color: red;
+            right: -100px;  
+            overflow-x: hidden;
+            }
+            100% {
+            background-color: green;
+            right: 0px;
+            } 
+        }
+	</style>
+</head>
+<body>
+    <div class="div-limitante">
+        <h1>Div-limitante</h1>
+        <button id="btn-fechar">Fechar</button>
+        <button id="btn-abrir">Abrir</button> 
+        <div class="element">
+            Elemento
+        </div>
+    </div>
+         
+    <script>
+		fnFechar(){
+            varElemento = document.getElementById("element");
+
+            varElemento.
+            
+        }
+
+        fnAbrir(){
+            
+        }
+	</script>
+</body>
+</html>
