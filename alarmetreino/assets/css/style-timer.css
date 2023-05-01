@@ -1,0 +1,92 @@
+.ctn-timer{
+    display: none;
+    position: relative;
+    flex-direction: column;
+    background: black;
+    width: 100vw;
+    height: 100vh;
+    color: yellow;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+
+}
+
+.tempo-execucao{
+    border: pink solid 1px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.texto-tempo-execucao{
+    border: pink solid 1px;
+    flex: 1;
+}
+
+.valor-tempo-execucao{
+    border: white solid 1px;
+    display: flex;
+
+    flex: 1;
+    width: 100%;
+    font-size: 300px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.info-decorrido{
+    display: flex;
+    flex-direction: colum;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: right;
+    text-align: center;
+    width: 100%;
+    
+} 
+
+.tempos{
+    display: flex;
+    flex-direction: column;
+    /* border: white solid 1px; */
+    flex-grow: 1;
+    font-size: 30px;
+    width: 50%;
+    
+}
+
+
+.volta{
+    /* border: white solid 1px; */
+    flex-grow: 1;
+    font-size: 30px;
+    width: 50%
+}
+
+.botoes-controle{
+    border: white solid 1px;
+    display: flex;
+    flex-direction: row;
+    /* margin: 10px; */
+    flex: 1;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    
+}
+
+.botoes-controle button{
+    width: 120px;
+    height: 50px;
+}
+
+.btn-fechar-timer{
+    position: fixed;
+    z-index: 1;
+    bottom: 0px;
+    right: 0px;
+}

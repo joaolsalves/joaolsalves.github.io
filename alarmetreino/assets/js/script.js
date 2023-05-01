@@ -36,3 +36,13 @@ function fnExibePrincipal(){
     elementoPrincipal.style.display = "flex";
 }
 
+function fnIniciarTimer(){
+   var ctimer = document.getElementById("id-ctn-timer");
+   var cPrinc = document.getElementById("id-ctn-principal");
+
+    ctimer.style.display = "flex";
+    ctimer.style.position = "fixed";
+        
+    cPrinc.style.display = "none";
+    
+}

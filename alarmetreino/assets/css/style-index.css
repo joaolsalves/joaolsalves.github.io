@@ -6,6 +6,7 @@ body{
     background: black;
 }
 
+.ctn-principal 
 div{
     border-radius: 8px;
     
@@ -130,3 +131,4 @@ a {
 .ctn-define-tabata {
     animation: open-left 1s ease-in-out;
   }
+

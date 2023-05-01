@@ -5,7 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="assets/css/style.css"/>
+    <link rel="stylesheet" href="assets/css/style-index.css"/>
+    <link rel="stylesheet" href="assets/css/style-timer.css"/>
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4380705700215739" crossorigin="anonymous"></script>
+    
 </head>
 
 <body>
@@ -37,7 +41,7 @@
         </div>
 
         <div class="ctn-iniciar cl-centralizar-conteudo">
-            <button class="btn-iniciar">INICIAR</button>
+            <button class="btn-iniciar" onclick="fnIniciarTimer()">INICIAR</button>
         </div>
 
         <div class="ctn-bottom cl-centralizar-conteudo">
@@ -76,6 +80,45 @@
 
             <p/>
         </article>
+
+    </div>
+
+    <div class="ctn-timer" id="id-ctn-timer">
+
+        <div class="timer-top">
+            <h1>Tabata Ultra Simples</h1>
+        </div>
+
+        <div class="tempo-execucao">
+            <div class="valor-tempo-execucao">05</div>
+        </div>
+
+        <div class="botoes-controle">
+            <div class="ctn-btn-stop">
+                <button>Stop</button>
+            </div>
+            <div class="ctn-tbn-pause">
+                <button>Pause</button>
+            </div>
+            <div class="ctn-tbn-play">
+                <button>Play</button>
+            </div>
+        </div>
+
+        <div class="info-decorrido">
+            <div class="volta">
+                <div class="texto-volta">Voltas</div>
+                <div class="valor-volta">01/03</div>
+            </div>
+            <div class="tempos">
+                <div class="texto-tempos">Tempo</div>
+                <div class="valor-tempos">02:35/04:00</div>
+            </div>
+        </div>
+        
+        <div class="btn-fechar-timer">
+            <h1>Voltar</h1>
+        </div>
 
     </div>
 
