@@ -89,12 +89,10 @@ h1 {
 }
 
 .cl-centralizar-conteudo{
- 
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    
+    align-items: center;  
 }
 
 .ctn-bottom{
@@ -102,7 +100,6 @@ h1 {
     background: white;
     flex-grow: 1;
     border-radius: 5px;
-    
 }
 
 .btn-iniciar{
