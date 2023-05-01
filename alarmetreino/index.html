@@ -16,25 +16,10 @@
 
     <div class="ctn-principal" id="id-ctn-principal">
 
-        <div class="ctn-gAds">
-            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4380705700215739" crossorigin="anonymous"></script>
-            <!-- Horizontal -->
-                <ins class="adsbygoogle"
-                    style="display:block"
-                    data-ad-client="ca-pub-4380705700215739"
-                    data-ad-slot="1600509552"
-                    data-ad-format="auto"
-                    data-full-width-responsive="true">
-                </ins>
-            <script>
-                (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
-        </div>
-
         <div class="ctn-header cl-centralizar-conteudo .arrumaDivInputs" onclick="fnDefineTabata()">
             <h1>TABATA SIMPLES</h1>
-        </div>
-        
+        </div>     
+    
         <div class="ctn-preparacao cl-centralizar-conteudo .arrumaDivInputs" onclick="fnFocoNoTxtBoxTempoPreparacao()">
             <h1>Preparação</h1>
             <input type="number" min="0" max="999" step="5" maxlength="3" class="txtTempoPreparacao arrumaTxtBox" value="5" id="txtBoxTempoPreparacao">
@@ -59,8 +44,27 @@
             <button class="btn-iniciar" onclick="fnIniciarTimer()">INICIAR</button>
         </div>
 
-        <div class="ctn-bottom cl-centralizar-conteudo">
-            <h1>Bottom</h1>
+        <div class="ctn-gAds">
+
+            <fieldset>
+                
+                <legend>Publicidade:</legend>
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4380705700215739" crossorigin="anonymous"></script>
+                <!-- Horizontal -->
+                <ins class="adsbygoogle"
+                    style="display:block"
+                    data-ad-client="ca-pub-4380705700215739"
+                    data-ad-slot="1600509552"
+                    data-ad-format="auto"
+                    data-full-width-responsive="true">
+                </ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+
+
+            </fieldset>
+                                
         </div>
 
     </div>
@@ -100,39 +104,73 @@
 
     <div class="ctn-timer" id="id-ctn-timer">
 
-        <div class="timer-top">
+        <div class="ctn-timer-top">
             <h1>Tabata Ultra Simples</h1>
         </div>
 
-        <div class="tempo-execucao">
-            <div class="valor-tempo-execucao">05</div>
-        </div>
+            <div class="ctn-corpo">
 
-        <div class="botoes-controle">
-            <div class="ctn-btn-stop">
-                <button>Stop</button>
-            </div>
-            <div class="ctn-tbn-pause">
-                <button>Pause</button>
-            </div>
-            <div class="ctn-tbn-play">
-                <button>Play</button>
-            </div>
-        </div>
+                <div class="ctn-gAds">
 
-        <div class="info-decorrido">
-            <div class="volta">
-                <div class="texto-volta">Voltas</div>
-                <div class="valor-volta">01/03</div>
+                    <fieldset>
+                        
+                        <legend>Publicidade:</legend>
+                        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4380705700215739" crossorigin="anonymous"></script>
+                        <!-- Horizontal -->
+                        <ins class="adsbygoogle"
+                            style="display:block"
+                            data-ad-client="ca-pub-4380705700215739"
+                            data-ad-slot="1600509552"
+                            data-ad-format="auto"
+                            data-full-width-responsive="true">
+                        </ins>
+                        <script>
+                            (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
+
+
+                    </fieldset>
+                                        
+                </div>
+
+                <div class="ctn-timer-program">
+
+                    <div class="tempo-execucao">
+                        <div class="texto-tempo-execucao">Timer</div>
+                        <div class="valor-tempo-execucao">05</div>
+                    </div>
+
+                    <div class="botoes-controle">
+                        <div class="ctn-btn-stop">
+                            <button>Stop</button>
+                        </div>
+                        <div class="ctn-tbn-pause">
+                            <button>Pause</button>
+                        </div>
+                        <div class="ctn-tbn-play">
+                            <button>Play</button>
+                        </div>
+                    </div>
+
+                    <div class="info-decorrido">
+                        <div class="volta">
+                            <div class="texto-volta">Voltas</div>
+                            <div class="valor-volta">01/03</div>
+                        </div>
+                        <div class="tempos">
+                            <div class="texto-tempos">Tempo</div>
+                            <div class="valor-tempos">02:35/04:00</div>
+                        </div>
+                    </div>
+
+                </div>
+            
             </div>
-            <div class="tempos">
-                <div class="texto-tempos">Tempo</div>
-                <div class="valor-tempos">02:35/04:00</div>
-            </div>
-        </div>
         
-        <div class="btn-fechar-timer">
-            <h1>Voltar</h1>
+        <div class="btn-fechar-timer" onclick="fnTimerSair()">
+            
+            <h1>SAIR</h1>
+
         </div>
 
     </div>

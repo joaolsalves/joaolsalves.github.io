@@ -1,92 +1,117 @@
-.ctn-timer{
-    display: none;
-    position: relative;
-    flex-direction: column;
-    background: black;
-    width: 100vw;
-    height: 100vh;
-    color: yellow;
-    justify-content: center;
-    align-items: center;
-    margin: 0px;
-    padding: 0px;
-
+.ctn-timer {
+  display: none;
+  position: relative;
+  flex-direction: column;
+  background: black;
+  width: 100vw;
+  height: 100vh;
+  color: yellow;
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+  padding: 0px;
 }
 
-.tempo-execucao{
-    border: pink solid 1px;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+.ctn-timer-top {
+  display: flex;
+  position: fixed;
+  top: 0px;
+  height: 60px;
+  width: 100%;
+  border: white solid 1 px;
+  background-color: gray;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
-.texto-tempo-execucao{
-    border: pink solid 1px;
-    flex: 1;
+.ctn-corpo {
+  position: fixed;
+  top: 60px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.valor-tempo-execucao{
-    border: white solid 1px;
-    display: flex;
-
-    flex: 1;
-    width: 100%;
-    font-size: 300px;
-    align-items: center;
-    justify-content: center;
+.tempo-execucao {
+  border: white solid 1px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
-
-.info-decorrido{
-    display: flex;
-    flex-direction: colum;
-    flex-grow: 1;
-    justify-content: center;
-    align-items: right;
-    text-align: center;
-    width: 100%;
-    
-} 
-
-.tempos{
-    display: flex;
-    flex-direction: column;
-    /* border: white solid 1px; */
-    flex-grow: 1;
-    font-size: 30px;
-    width: 50%;
-    
+.texto-tempo-execucao {
+  border: white solid 1px;
+  display: flex;
+  position: relative;
+  justify-content: center;
 }
 
-
-.volta{
-    /* border: white solid 1px; */
-    flex-grow: 1;
-    font-size: 30px;
-    width: 50%
+.valor-tempo-execucao {
+  border: white solid 1px;
+  display: flex;
+  width: 100%;
+  font-size: 250px;
+  align-items: center;
+  justify-content: center;
 }
 
-.botoes-controle{
-    border: white solid 1px;
-    display: flex;
-    flex-direction: row;
-    /* margin: 10px; */
-    flex: 1;
-    align-items: center;
-    justify-content: space-around;
-    width: 100%;
-    
+.info-decorrido {
+  display: flex;
+  flex-direction: colum;
+  justify-content: center;
+  align-items: right;
+  text-align: center;
+  width: 100%;
+  border: white solid 1px;
 }
 
-.botoes-controle button{
-    width: 120px;
-    height: 50px;
+.tempos {
+  display: flex;
+  flex-direction: column;
+  /* border: white solid 1px; */
+  font-size: 20px;
+  width: 50%;
 }
 
-.btn-fechar-timer{
-    position: fixed;
-    z-index: 1;
-    bottom: 0px;
-    right: 0px;
+.volta {
+  /* border: white solid 1px; */
+  font-size: 20px;
+  width: 50%;
+}
+
+.botoes-controle {
+  border: white solid 1px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.botoes-controle button {
+  width: 120px;
+  height: 50px;
+}
+
+.btn-fechar-timer {
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  border: white solid 1 px;
+  width: 100%;
+  background: red;
+  color: white;
+  bottom: 0px;
+}
+
+.ctn-gAds {
+  width: 100%;
+  height: 60px;
+}
+
+fieldset{
+  color: yellow;
 }
