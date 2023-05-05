@@ -47,57 +47,7 @@ function fnIniciarTimer() {
   //Oculta a tela inicial
   cPrinc.style.display = "none";
 
-  //Popular as variáves para exibição e cálculo do tempo total
-  const vTempoPreparacao = parseInt(document.getElementById("idTxtBoxTempoPreparacao").value);
-  const vTempoExercicio = parseInt(document.getElementById("idTxtBoxTempoExercicio").value);
-  const vTempoDescanso = parseInt(document.getElementById("idTxtBoxTempoDescanso").value);
-  const vQtdRepeticoes = parseInt(document.getElementById("idTxtBoxQtdRepeticoes").value);
-
-  let meuH1 = document.getElementById("teste");
-  meuH1.textContent = vTempoPreparacao;
-
-
-   //Para auxiliar na contagem de descanso
-  let vAuxDescanso = 0;
-  if (vQtdRepeticoes == 1) {
-    vAuxDescanso = 0;
-  } else {
-    vAuxDescanso = vQtdRepeticoes - 1;
-  }
-
-  
-  
-  let vTempoEmExercicio = 0;
-  let vTempoTotal = 0;
-
-  //Calcular o tempo total do exercício
-  vTempoTotal = ( 
-    (vTempoDescanso * vAuxDescanso) +
-    (vTempoExercicio * vQtdRepeticoes) +
-    (vTempoPreparacao));
-
-    console.log("Preparação: " + vTempoPreparacao);
-    console.log("Exercício: " + vTempoExercicio);
-    console.log("Descanso:" + vTempoDescanso);
-    console.log("Repetições: " + vQtdRepeticoes);
-    console.log("Tempo total: " + vTempoTotal);
-    
-    //Deu certo a contagem do tempo total
-    //Vamos para a distribuição no formato 00:00
-
-    let vHora = 0;
-    let vMinuto = 0;
-    let vSegundo = 0;
-    
-    //Separar minutos das horas
-    vHora = Math.trunc(vTempoTotal / 60 / 60);
-    console.log("Horas: " + vHora);
-    vMinuto = Math.trunc((vTempoTotal % (60 * 60)) / 60 ) ;
-    console.log("Minutos: " + vMinuto);
-    vSegundo = vTempoTotal % 60;
-    console.log("Segundos: " + vSegundo);
-
-  /*
+ /*
 
        Executar preparação
 
@@ -117,6 +67,66 @@ function fnIniciarTimer() {
     */
 }
 
+
+function fnTempoTotal(){
+   //Popular as variáves para exibição e cálculo do tempo total
+   const vTempoPreparacao = parseInt(document.getElementById("idTxtBoxTempoPreparacao").value);
+   const vTempoExercicio = parseInt(document.getElementById("idTxtBoxTempoExercicio").value);
+   const vTempoDescanso = parseInt(document.getElementById("idTxtBoxTempoDescanso").value);
+   const vQtdRepeticoes = parseInt(document.getElementById("idTxtBoxQtdRepeticoes").value);
+ 
+   let meuH1 = document.getElementById("teste");
+   meuH1.textContent = vTempoPreparacao;
+ 
+ 
+    //Para auxiliar na contagem de descanso
+   let vAuxDescanso = 0;
+   if (vQtdRepeticoes == 1) {
+     vAuxDescanso = 0;
+   } else {
+     vAuxDescanso = vQtdRepeticoes - 1;
+   }
+   
+   let vTempoEmExercicio = 0;
+   let vTempoTotal = 0;
+ 
+   //Calcular o tempo total do exercício
+   vTempoTotal = ( 
+     (vTempoDescanso * vAuxDescanso) +
+     (vTempoExercicio * vQtdRepeticoes) +
+     (vTempoPreparacao));
+ 
+     console.log("Preparação: " + vTempoPreparacao);
+     console.log("Exercício: " + vTempoExercicio);
+     console.log("Descanso:" + vTempoDescanso);
+     console.log("Repetições: " + vQtdRepeticoes);
+     console.log("Tempo total: " + vTempoTotal);
+     
+     //Deu certo a contagem do tempo total
+     //Vamos para a distribuição no formato 00:00
+ 
+     let vHora = 0;
+     let vMinuto = 0;
+     let vSegundo = 0;
+     
+     //Separar minutos das horas
+     vHora = Math.trunc(vTempoTotal / 60 / 60);
+     console.log("Horas: " + vHora);
+     vMinuto = Math.trunc((vTempoTotal % (60 * 60)) / 60 ) ;
+     console.log("Minutos: " + vMinuto);
+     vSegundo = vTempoTotal % 60;
+     console.log("Segundos: " + vSegundo);
+ 
+     let vTempoFormatado = '00:00:00';
+ 
+     vTempoFormatado = vHora.toString().padStart(2, '0') + ':' + vMinuto.toString().padStart(2, '0') + ':' + vSegundo.toString().padStart(2, '0');
+ 
+     console.log(vTempoFormatado);
+ 
+     let labelTempoTotal = document.getElementById("id-lbl-tempo-total");
+     labelTempoTotal.textContent = vTempoFormatado;
+}
+
 function fnTimerSair() {
   var ctimer = document.getElementById("id-ctn-timer");
   var cPrinc = document.getElementById("id-ctn-principal");
@@ -128,4 +138,25 @@ function fnTimerSair() {
 
 function fnPrep() {
   return;
+}
+
+function evitarMenorQueUm(event) {
+
+  let valida = document.getElementById("idTxtBoxQtdRepeticoes").value;
+  console.log("Valida: " + valida);
+  if(valida < 1){
+    valida.value = 1;
+  }
+  
+
+}
+
+function somenteNumeros(event) {
+  const tecla = event.key;
+  if (tecla >= '0' && tecla <= '9' %%) {
+    return true;
+  } else {
+    event.preventDefault();
+    return 1;
+  }
 }

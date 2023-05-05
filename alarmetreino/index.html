@@ -14,36 +14,43 @@
 
 <body>
 
+    <!-- Página de entrada -->
+
     <div class="ctn-principal" id="id-ctn-principal">
 
         <div class="ctn-header cl-centralizar-conteudo .arrumaDivInputs" onclick="fnDefineTabata()">
             <h1>TABATA SIMPLES</h1>
         </div>     
     
-        <div class="ctn-preparacao cl-centralizar-conteudo .arrumaDivInputs" onclick="fnFocoNoTxtBoxTempoPreparacao()">
+        <div class="ctn-preparacao cl-centralizar-conteudo .arrumaDivInputs" onclick="fnFocoNoTxtBoxTempoPreparacao(); fnTempoTotal()">
             <h1>Preparação</h1>
             <input type="number" min="0" max="999" step="5" maxlength="3" class="txtTempoPreparacao arrumaTxtBox" value="5" id="idTxtBoxTempoPreparacao">
         </div>
         
-        <div class="ctn-exercicio cl-centralizar-conteudo " onclick="fnFocoNoTxtBoxTempoExercicio()">
+        <div class="ctn-exercicio cl-centralizar-conteudo " onclick="fnFocoNoTxtBoxTempoExercicio(); fnTempoTotal()">
             <h1>Exercício</h1>
             <input type="number" min="0" max="999" step="5" maxlength="3" class="txtTempoExercicio arrumaTxtBox" value="30" id="idTxtBoxTempoExercicio">
         </div>
 
-        <div class="ctn-descanso cl-centralizar-conteudo" onclick="fnFocoNoTxtBoxTempoDescanso()">
+        <div class="ctn-descanso cl-centralizar-conteudo" onclick="fnFocoNoTxtBoxTempoDescanso(); fnTempoTotal()">
             <h1>Descanso</h1>
             <input type="number" min="0" max="999" step="5" maxlength="3" class="txtTempoDescanso arrumaTxtBox" value="20" id="idTxtBoxTempoDescanso">
         </div>
 
-        <div class="ctn-repeticoes cl-centralizar-conteudo" onclick="fnFocoNoTxtBoxQtdRepeticoes()">
+        <div class="ctn-repeticoes cl-centralizar-conteudo" onclick="fnFocoNoTxtBoxQtdRepeticoes(); fnTempoTotal()" oninput="fnTempoTotal(); somenteNumeros(event);">
             <h1>Repetições</h1>
-            <input type="number" min="0" max="999" step="1" maxlength="3" class="txtQtdRepeticoes arrumaTxtBox" value="4" id="idTxtBoxQtdRepeticoes">
+            <input type="number" min="1" max="3" step="1" maxlength="3" class="txtQtdRepeticoes arrumaTxtBox" value="4" id="idTxtBoxQtdRepeticoes">
+        </div>
+
+        <div class="ctn-repeticoes cl-centralizar-conteudo" onclick="fnFocoNoTxtBoxQtdRepeticoes(); fnTempoTotal()">
+            <div class="ctn-tempo-total"><label for="lbl-tempo-total" id="id-lbl-tempo-total">00:00:00</label></div>
         </div>
 
         <div class="ctn-iniciar cl-centralizar-conteudo">
             <button class="btn-iniciar" onclick="fnIniciarTimer()">INICIAR</button>
         </div>
 
+        <!-- Google AdS -->
         <div class="ctn-gAds">
 
             <fieldset>
@@ -68,6 +75,8 @@
         </div>
 
     </div>
+
+    <!-- Definição de Tabata -->
 
     <div class="ctn-define-tabata" id="id-ctn-define-tabata" onclick="fnExibePrincipal()">
 
@@ -101,6 +110,8 @@
         </article>
 
     </div>
+
+    <!-- Inicio do Timer -->
 
     <div class="ctn-timer" id="id-ctn-timer">
 

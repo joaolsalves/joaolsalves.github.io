@@ -132,3 +132,28 @@ body{
     justify-content: center;
     align-items: center;
 }
+
+.ctn-imagens-portifolio{
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.ctn-trabalho {
+    
+    width: 30%;
+    height: auto;
+    
+    
+  }
+  
+.ctn-trabalho img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    
+  }

@@ -124,3 +124,13 @@ a {
     animation: open-left 1s ease-in-out;
   }
 
+.ctn-tempo-total{
+
+    display: block;
+    position: relative;
+    width: 100px;
+    height: 50px;
+    color: white;
+    text-align: center;
+    font-size: 25px;
+}
