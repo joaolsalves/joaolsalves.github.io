@@ -153,7 +153,7 @@ function evitarMenorQueUm(event) {
 
 function somenteNumeros(event) {
   const tecla = event.key;
-  if (tecla >= '0' && tecla <= '9' %%) {
+  if (tecla >= '0' && tecla <= '9') {
     return true;
   } else {
     event.preventDefault();
