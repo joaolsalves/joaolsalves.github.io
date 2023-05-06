@@ -1,4 +1,4 @@
 git add .
-git commit -m "Correção de funão não terminada"
+git commit -m "Trocado txtbox por botão ao incrementar o tempo"
 git push
 pause
