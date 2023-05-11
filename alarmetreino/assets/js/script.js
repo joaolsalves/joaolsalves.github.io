@@ -15,6 +15,9 @@ function fnFocoNoTxtBoxQtdRepeticoes() {
   idTxtBoxQtdRepeticoes.select();
 } */
 
+let btnStop = document.querySelector('#btn-stop');
+let btnPlay = document.querySelector('#btn-play');
+
 function fnDefineTabata() {
   //window.open("https://www.google.com", "_blank");
   //window.location.href = "https://www.google.com";
@@ -47,31 +50,16 @@ function fnIniciarTimer() {
   //Oculta a tela inicial
   cPrinc.style.display = "none";
 
-  /*
-
-       Executar preparação
-
-            Mudar o título do contador para o tipo de contador(prep, exercício, descanso)
-
-            Alerta INICIO
-            Executar TimerExercicio
-
-            Validar descanso
-                Se executar descanso = sim
-                    Alerta DESCANSO
-                    Executar TimerDescanso
-                Se não
-                    Alerta FIM DE TREINO
-
+  
+  fnEscalonaTimer();
     
-    */
+    
 }
 
 function fnTempoTotal() {
   //Popular as variáves para exibição e cálculo do tempo total
   const vTempoPreparacao = parseInt(
-    document.getElementById("id-lbl-tempo-preparacao").textContent
-  );
+    document.getElementById("id-lbl-tempo-preparacao").textContent);
   
   console.log(vTempoPreparacao);
 
@@ -141,17 +129,31 @@ function fnTempoTotal() {
 
   console.log(vTempoFormatado);
 
-  let labelTempoTotal = document.getElementById("id-lbl-tempo-total");
-  labelTempoTotal.textContent = vTempoFormatado;
+  let vlabelTempoTotal = document.getElementById("id-lbl-tempo-total");
+  vlabelTempoTotal.textContent = vTempoFormatado;
+
+  let vLabelVoltaTotal = document.getElementById("id-lbl-volta-total"); 
+  console.log(vLabelVoltaTotal.textContent);
+
+  vLabelVoltaTotal.textContent = vQtdRepeticoes.toString().padStart(2,"0");
+
+  let vlabelTempoTotalTimer = document.getElementById("id-lbl-tempo-total-timer");
+  vlabelTempoTotalTimer.textContent = vTempoFormatado;
+
+
 }
 
 function fnTimerSair() {
   var ctimer = document.getElementById("id-ctn-timer");
   var cPrinc = document.getElementById("id-ctn-principal");
 
-  ctimer.style.display = "none";
+  //Ao sair do timer, parar todos os timers que estejam em execução
+  fnStopAllTimer()
+
+   ctimer.style.display = "none";
 
   cPrinc.style.display = "flex";
+
 }
 
 
@@ -219,4 +221,19 @@ switch(vElemento){
     }
   }
   fnTempoTotal();
+}
+
+function fnFormataSegundos(iSegundos){
+  let horas = Math.floor(iSegundos / 3600);
+  let minutos = Math.floor((iSegundos % 3600) / 60);
+  let segs = iSegundos % 60;
+
+  horas = horas < 10 ? "0" + horas : horas;
+  minutos = minutos < 10 ? "0" + minutos : minutos;
+  segs = segs < 10 ? "0" + segs : segs;
+
+  return horas + ":" + minutos + ":" + segs;
+  console.log(iSegundos);
+
+
 }
