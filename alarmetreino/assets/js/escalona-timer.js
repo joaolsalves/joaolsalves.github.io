@@ -12,9 +12,9 @@ async function fnEscalonaTimer(){
     let vVoltaAtual = document.getElementById("id-lbl-volta-atual");
 
     const audioPreparacao = new Audio("\assets\\audio\\audio-relogio-tic-tac.mp3");
-    const audioInicioExercício = new Audio("\assets\\audio\\audio-sino-3-toques.mp3");
-    const audioFimExercício = new Audio("\assets\\audio\\audio-sino-2-toques.mp3");
-    const audioFimTreino = new Audio("\assets\\audio\\audio-apito-longo.mp3");
+    const audioInicioExercício = new Audio("\assets\\audio\\audio-sino-3-toques-edit.mp3");
+    const audioFimExercício = new Audio("\assets\\audio\\audio-sino-2-toques-edit.mp3");
+    const audioFimTreino = new Audio("\assets\\audio\\audio-apito-longo-edit.mp3");
     
     vTempoTotalDecorrido = 0;
     eTempoTotalDecorrido.textContent = fnFormataSegundos(0);

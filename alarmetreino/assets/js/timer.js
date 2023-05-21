@@ -13,7 +13,7 @@ function fnStopAllTimer(){
 function iniciarTimer(nContador, nTipo) {
 
 
-  const audioContagem = new Audio("\assets\\audio\\audio-sino-unico-edited3.mp3");
+  const audioContagem = new Audio("\assets\\audio\\audio-alarme-relogio-camelo-edit.mp3");
 
  return new Promise((resolve) => {
 

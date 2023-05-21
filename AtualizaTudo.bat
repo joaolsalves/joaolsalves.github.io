@@ -1,4 +1,4 @@
 git add .
-git commit -m "Adicionados alarmes sonoros, sem controle de pausa"
+git commit -m "Ajuste nos alarmes sonoros"
 git push
 pause
