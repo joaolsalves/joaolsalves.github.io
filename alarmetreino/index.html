@@ -16,15 +16,11 @@
   </head>
 
   <body onload="fnTempoTotal()">
-    <!-- Página de entrada -->
-
-    
+    <!-- Página de entrada -->  
 
     <div class="ctn-principal" id="id-ctn-principal">
       <div
-        class="ctn-header cl-centralizar-conteudo .arrumaDivInputs"
-        onclick="fnDefineTabata()"
-      >
+        class="ctn-header cl-centralizar-conteudo .arrumaDivInputs" onclick="fnDefineTabata()">
         <h1>TABATA SIMPLES</h1>
       </div>
 
@@ -184,6 +180,7 @@
     <!-- Inicio do Timer -->
 
     <div class="ctn-timer" id="id-ctn-timer">
+
       <div class="ctn-timer-top">
         <h1 id="teste">Tabata Ultra Simples</h1>
       </div>
@@ -191,40 +188,73 @@
       <div class="ctn-corpo">
         
         <div class="ctn-timer-program">
-          <div class="tempo-execucao">
+
             <div class="texto-tempo-execucao" id="id-texto-tempo-execucao">
               TIPO DE CONTAGEM: PREP, EXERCÍCIO, DESCANSO
             </div>
-            <div class="valor-tempo-execucao" id="id-valor-tempo-execucao"></div>
-          </div>
 
-          <div class="botoes-controle">
-            <div class="ctn-btn-stop">
-              <button id="btn-stop" onclick="pararTimer()">Stop</button>
-            </div>
-            <div class="ctn-tbn-pause">
-              <button>Pause</button>
-            </div>
-            <div class="ctn-tbn-play">
-              <button id="btn-play" onclick="retornarTimer()">Play</button>
-            </div>
-          </div>
+            <div class="valor-tempo-execucao" id="id-valor-tempo-execucao">
 
-          <div class="info-decorrido">
-            <div class="volta">
-              <div class="texto-volta">Voltas</div>
-              <div class="valor-volta">
-                <lbl-volta-completa id="id-lbl-volta-atual">01</lbl-volta-completa>
-                <lbl-volta-total id="id-lbl-volta-total"></lbl-volta-total></div>
             </div>
-            <div class="tempos">
-              <div class="texto-tempos">Tempo</div>
-              <div class="valor-tempos">
-                <lbl-tempo-decorrido id="lbl-tempo-decorrido">00:00:00</lbl-tempo-decorrido>/
-                <lbl-tempo-total id="id-lbl-tempo-total-timer">3:00</lbl-tempo-total>
+
+            <div class="botoes-controle">
+
+              <div class="ctn-btn-stop">
+                <button id="btn-stop" onclick="pararTimer()">Stop</button>
+              </div>
+  
+              <div class="ctn-tbn-pause">
+                <button>Pause</button>
+              </div>
+  
+              <div class="ctn-tbn-play">
+                <button id="btn-play" onclick="retornarTimer()">Play</button>
+              </div>
+  
             </div>
-          </div>
+
+            <div class="info-decorrido">
+            
+              <div class="volta">
+  
+                <div class="texto-volta">
+                  Voltas
+                </div>
+                <div class="valor-volta">
+  
+                  <lbl-volta-completa id="id-lbl-volta-atual">
+                    01
+                  </lbl-volta-completa> /
+                  <lbl-volta-total id="id-lbl-volta-total">
+  
+                  </lbl-volta-total>
+  
+                </div>
+              </div>
+  
+              <div class="tempos">
+  
+                <div class="texto-tempos">
+                  Tempo
+                </div>
+  
+                <div class="valor-tempos">
+  
+                  <lbl-tempo-decorrido id="lbl-tempo-decorrido">
+                    00:00:00
+                  </lbl-tempo-decorrido> /
+                  <lbl-tempo-total id="id-lbl-tempo-total-timer">
+                    3:00
+                  </lbl-tempo-total>
+  
+              </div>
+  
+            </div>
+
         </div>
+        
+      
+      
       </div>
 
       <div class="btn-fechar-timer" onclick="fnTimerSair()">
@@ -232,8 +262,8 @@
       </div>
     </div>
 
-    <script src="assets/js/script.js"></script>
+    <script src="assets/js/script-inicial.js"></script>
     <script src="assets/js/timer.js"></script>
-    <script src="assets/js/escalona.js"></script>
+    <script src="assets/js/escalona-timer.js"></script>
   </body>
 </html>

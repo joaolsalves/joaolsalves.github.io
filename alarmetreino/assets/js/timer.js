@@ -2,15 +2,18 @@ let vTempoTotalDecorrido = 1;
 let eTempoTotalDecorrido = document.getElementById("lbl-tempo-decorrido");
 let eTempoExecucao = document.getElementById("id-valor-tempo-execucao");
 
+/* nContador = 0;
+nTipo = 'abc'; */
+
 function fnStopAllTimer(){
    pararTimer();
 }
 
 
-function iniciarTimer(nContador) {
+function iniciarTimer(nContador, nTipo) {
 
 
-
+  const audioContagem = new Audio("\assets\\audio\\audio-sino-unico-edited3.mp3");
 
  return new Promise((resolve) => {
 
@@ -20,11 +23,8 @@ function iniciarTimer(nContador) {
 
    intervalId = setInterval(() => {
 
-         
-
      if(contador == 1 ){
-      //document.getElementById("id-valor-tempo-execucao").textContent = contador;
-        
+           
       clearInterval(intervalId); //Para o timer
        
       vTempoTotalDecorrido = vTempoTotalDecorrido + 1;
@@ -38,17 +38,26 @@ function iniciarTimer(nContador) {
 
      }
 
+     if( contador > 1 && contador <= 4 && (nTipo == 'descanso' || nTipo == 'preparacao') ) {
+
+      audioContagem.play();
+
+     }
+
      contador--;
 
-     eTempoExecucao.textContent = contador;
+     eTempoExecucao.textContent = contador.toString().padStart(2,'0');
 
+     //vTempoTotalDecorrido = vTempoTotalDecorrido + 1;
      vTempoTotalDecorrido = vTempoTotalDecorrido + 1;
 
      eTempoTotalDecorrido.textContent = fnFormataSegundos(vTempoTotalDecorrido);
+
   
    }, 1000);
 
  }); //Fecha a Promise
+
 }
 
 
@@ -65,8 +74,15 @@ function pararTimer() {
 function retornarTimer(){
 
   console.log("Play");
-  setInterval(1000);
-  //iniciarTimer(1000);
+  /* setInterval(1000); */
+  /* iniciarTimer(); */
+  
+    nContador = eTempoExecucao.textContent;
+  
+
+  iniciarTimer(nContador, vTipoTimer) 
+  console.log("Contador: " + nContador);
+  console.log("Tipo timer: " + vTipoTimer.textContent);
   
   ligaBtnStop();
   desligaBtnPlay();

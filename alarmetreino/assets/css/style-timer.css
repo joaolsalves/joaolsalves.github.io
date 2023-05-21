@@ -8,14 +8,16 @@
   color: yellow;
   justify-content: center;
   align-items: center;
-  margin: 0px;
+  margin: 10px;
   padding: 0px;
+  box-sizing: border-box;
 }
 
 .ctn-timer-top {
   display: flex;
   position: fixed;
   top: 0px;
+  left: 0px;
   height: 60px;
   width: 100%;
   border: white solid 1 px;
@@ -28,33 +30,33 @@
 .ctn-corpo {
   position: fixed;
   top: 60px;
-  height: 100%;
+  /* height: 200%; */
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-}
+  text-align: center;
+  align-content: center;
 
-.tempo-execucao {
-  border: white solid 1px;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
+  /* background: blue; */
 }
 
 .texto-tempo-execucao {
-  border: white solid 1px;
+  border-bottom: white solid 1px;
   display: flex;
   position: relative;
   justify-content: center;
+  box-sizing: border-box;
+
 }
 
 .valor-tempo-execucao {
-  border: white solid 1px;
+  /* border: white solid 1px; */
   display: flex;
   width: 100%;
   font-size: 250px;
   align-items: center;
   justify-content: center;
+  box-sizing: border-box;
 }
 
 .info-decorrido {
@@ -64,7 +66,14 @@
   align-items: right;
   text-align: center;
   width: 100%;
+  /* border: white solid 1px; */
+}
+
+.ctn-timer-program {
+  /* background: orchid; */
+  width: 350px;
   border: white solid 1px;
+  box-sizing: border-box;
 }
 
 .tempos {
@@ -73,17 +82,23 @@
   /* border: white solid 1px; */
   font-size: 20px;
   width: 50%;
+  /* background: pink; */
+  border-top: white solid 1px;
+  border-left: white solid 1px;
 }
 
 .volta {
   /* border: white solid 1px; */
   font-size: 20px;
   width: 50%;
+  /* background: burlywood; */
+  border-top: white solid 1px;
 }
 
 .botoes-controle {
   border: white solid 1px;
-  display: flex;
+  /* display: flex; */
+  display: none;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
@@ -104,7 +119,9 @@
   width: 100%;
   background: red;
   color: white;
-  bottom: 10px;
+  bottom: 0px;
+  left: 0px;
+  height: 60px;
 }
 
 .ctn-gAds {
@@ -112,6 +129,6 @@
   height: 60px;
 }
 
-fieldset{
+fieldset {
   color: yellow;
 }

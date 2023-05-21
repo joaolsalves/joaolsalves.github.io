@@ -1,4 +1,4 @@
 git add .
-git commit -m "Timer em funcionamento, faltando alguns ajustes funcionais e visuais - Title"
+git commit -m "Adicionados alarmes sonoros, sem controle de pausa"
 git push
 pause
