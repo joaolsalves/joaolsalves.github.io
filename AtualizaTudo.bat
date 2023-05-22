@@ -1,4 +1,4 @@
 git add .
-git commit -m "Ajuste na fonte e alinhamento do container principal"
+git commit -m "Troca de fonte: Roboto Medium 500"
 git push
 pause
