@@ -21,6 +21,7 @@ body{
 }
 
 .container-logo{
+    display: none;
     flex-grow: 1;
     width: 10vw;
     background: orange;
@@ -33,12 +34,21 @@ body{
     display: flex;
     flex-direction: row;
     width: 80vw;
-    flex-grow: 5;
-    justify-content: space-around;
+    flex-grow: 100;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    
 
 }
 
+.container-center a{
+
+    text-decoration: none;
+    color: gray;
+}
+
 .container-menu{
+    display: none;
     flex-grow: 1;
     width: 10vw;
     background: orange;

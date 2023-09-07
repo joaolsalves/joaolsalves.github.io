@@ -1,4 +1,4 @@
 git add .
-git commit -m "site: terapeutacarlaamaral - Troca de Telefone"
+git commit -m "Adicionado exemplo de página se validação de senha"
 git push
 pause
