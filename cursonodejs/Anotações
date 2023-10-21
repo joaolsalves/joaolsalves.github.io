@@ -1,0 +1,56 @@
+Baixar o node
+nodejs.org
+
+Ver a versão do node js
+node -v
+
+Ver a versão do npm
+npm -v
+
+https://www.w3schools.com/nodejs/ref_modules.asp
+
+Módulos Incorporados(nativos)
+Módulos Locais(que a gente constrói)
+Módulos de Terceiros(outros construíram)
+
+https://javascript.info/import-export
+
+Módulo HTTP Server
+
+Não precisar reiniciar o servidor ao alterar os arquivos
+
+npm install -g nodemon *o "-g" instala o nodemon globalmente
+
+Para rodar o nodemon "nodemon index"
+
+/*** Módulo de arquivos do sistema FILE SYSTEM ***/
+
+/*** Manipulação de pastas ***/
+
+fs.existsSysnc() - Verificar se caminho existe
+fs.mkdirSync() - Criar uma pasta
+fs.renameSync() - Renomear uma pasta
+fs.rmdir() - Deletar uma pasta
+
+/*** Manipulação de arquivos ***/
+fs.writeFile() -> Substitui o arquivo e o conteúdo caso exista, se não
+existir, cria um novo arquivo com o conteúdo que passar.
+
+fs.appendFile() -> Adiciona conteúdo num arquivo, se o arquivo não existir, cria.
+
+fs.open() -> Abre um arquivo para leitura, se o arquivo não existir, cria vazio. Para criar um arquivo, utilizar a flag "w", para writing/escrita.
+
+fs.readfile() - Ler arquivo
+fs.rename() - Renomear
+fs.unlink() - Excluir arquivo
+
+/*** Módulo EXPRESS ***/
+
+Dentro do projeto:
+npm i express --save (* --save para instalar somente no projeto que estamos trabalhando)
+
+npm i express-session --save
+
+Sequelize -> Faz o meio-campo entre a aplicação e o banco de dados
+
+npm i sequelize mysql2 --save
