@@ -1,4 +1,4 @@
 git add .
-git commit -m "Adicionado exemplo de página se validação de senha - erro ao criar a pasta do projeto com letras maiusculas"
+git commit -m "Deletados projetos de teste que davam erro; Atualização de endereço consultório"
 git push
 pause
