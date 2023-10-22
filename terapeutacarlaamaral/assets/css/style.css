@@ -108,7 +108,7 @@ body {
 .dados-contato{
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
+  align-items: center; 
   justify-content: space-between;
 }
 
