@@ -1,4 +1,4 @@
 git add .
-git commit -m "Deletados projetos de teste que davam erro; Atualização de endereço consultório"
+git commit -m "Adicionando o projeto do cliente - ASSOCIAAMA"
 git push
 pause
