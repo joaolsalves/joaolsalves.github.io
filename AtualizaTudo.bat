@@ -1,4 +1,4 @@
 git add .
-git commit -m "Adicionando o projeto do cliente - ASSOCIAAMA"
+git commit -m "Migrando projetos para a Vercel"
 git push
 pause
