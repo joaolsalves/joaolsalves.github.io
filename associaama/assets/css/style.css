@@ -144,7 +144,7 @@ body {
 
 .btn-whatsapp {
   top: 70px;
-  right: 0px;
+  right: 10px;
 }
 
 .btn-whatsapp:hover {
@@ -154,7 +154,7 @@ body {
 
 .btn-instagram {
   top: 122px;
-  right: 0px;
+  right: 10px;
 }
 
 .btn-instagram:hover {
@@ -164,7 +164,7 @@ body {
 
 .btn-facebook {
   top: 174px;
-  right: 0px;
+  right: 10px;
 }
 
 .btn-facebook:hover {

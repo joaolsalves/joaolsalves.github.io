@@ -1,12 +1,14 @@
 :root {
-  --cor-inicial: #132440;
-  --cor-final: #16476A;
-  --cor-bottom: #3B9797;
+  --cor-bottom: #015cac;
+  --cor-inicial: #015cac;
+  --cor-final: #9ed2ff;/* #16476A; */
+  
 }
 
 * {
     color: white;
     font-family: 'Lato';
+    font-size: 10px;
 }
 
 html{
@@ -26,7 +28,7 @@ body{
 
     position: fixed;
     background: #015cac;
-    height: 60px;
+    height: 100px;
     width: 100%;
     top: 0px;
 
@@ -77,7 +79,7 @@ body{
     height: 80vh;
     width: 80vw;
     
-    background: #DFF6FF;
+    background: #e7e7e7;
     
 }
 
@@ -85,13 +87,13 @@ body{
     display: flex;
     height: 70vh;
     width: 100%;
-    background: #47B5FF;
+    background: black;
     
 }
 
 .container-home{
     /* background: #1363DF; */
-    background: linear-gradient(180deg, var(--cor-inicial), var(--cor-final));
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -101,7 +103,7 @@ body{
 
 .container-apresentacao{
     /* background: #47B5FF; */
-    background: linear-gradient(0deg, var(--cor-inicial), var(--cor-final));
+    background: linear-gradient(405deg, #1e3c72, #2a5298);
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -111,7 +113,7 @@ body{
 
 .container-produtos{
     /* background: #06283D; */
-    background: linear-gradient(180deg, var(--cor-inicial), var(--cor-final));
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -121,7 +123,7 @@ body{
 
 .container-servicos{
     /* background: #1363DF; */
-    background: linear-gradient(0deg, var(--cor-inicial), var(--cor-final));
+    background: linear-gradient(405deg, #1e3c72, #2a5298);
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -131,7 +133,7 @@ body{
 
 .container-portfolio{
     /* background: #47B5FF; */
-    background: linear-gradient(180deg, var(--cor-inicial), var(--cor-final));
+    background: linear-gradient(135deg, #1e3c72, black);
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -141,7 +143,7 @@ body{
 
 .container-suporte{
     /* background: #06283D; */
-    background: linear-gradient(0deg, var(--cor-inicial), var(--cor-final));
+    background: linear-gradient(135deg, var(--cor-inicial), var(--cor-final));
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -151,7 +153,7 @@ body{
 
 .container-faleconosco{
     /* background: #1363DF; */
-    background: linear-gradient(180deg, var(--cor-inicial), var(--cor-final));
+    background: linear-gradient(405deg, var(--cor-inicial), var(--cor-final));
     height: 100vh;
     display: flex;
     flex-direction: column;
