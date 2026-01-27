@@ -1,0 +1,18 @@
+/* Responsividade */
+@media (max-width: 768px) {
+  
+  .cl-sobre{
+      flex-direction: column;
+  }
+
+  .cl-paragrafo-sobre, .cl-imagem-sobre{
+      width: 100%;
+  }
+
+  .cl-imagem-bancada img{
+      width: 80%;
+      margin-left: 0;
+      margin-top: 20px;
+  }
+  
+}
