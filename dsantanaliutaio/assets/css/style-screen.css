@@ -1,19 +1,1 @@
 /* Responsividade */
-@media (max-width: 768px) {
-  
-  .cl-sobre{
-      background: gray;
-      
-  }
-
-  .cl-paragrafo-sobre, .cl-imagem-sobre{
-      width: 100%;
-  }
-
-  .cl-imagem-bancada img{
-      width: 100%;
-      margin-left: 0;
-      margin-top: 20px;
-  }
-  
-}
