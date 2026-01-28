@@ -100,6 +100,7 @@ nav a:hover {
   display: flex;
   flex-direction: column;
   background: var(--color-primary-3);
+  color: var(--font-color-primary-light);
   padding: 30px;
 
 }
@@ -292,8 +293,6 @@ footer {
 @media (max-width: 768px) {
   
   .cl-sobre{
-      background: var(--color-primary-3);
-      color: var(--font-color-primary-light);
       
   }
 
