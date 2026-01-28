@@ -34,6 +34,7 @@
   box-sizing: border-box;
 }
 
+
 body {
   font-family: 'Lato', Arial, sans-serif;
   color: #2b2b2b;
@@ -56,7 +57,7 @@ header h1 {
 
 nav a {
   color: #fff;
-  margin-left: 15px;
+  margin-left: px;
   text-decoration: none;
   font-size: 0.9rem;
 }
@@ -67,23 +68,48 @@ nav a:hover {
 
 .hero {
   text-align: center;
-  padding: 80px 20px;
+  padding: 0px 0px;
   background: var(--color-primary-3);
 }
 
 .hero h2 {
   font-size: 2rem;
-  margin-bottom: 15px;
+  margin-bottom: 0px;
 }
 
 .hero p {
   max-width: 600px;
-  margin: 0 auto 25px;
+  margin: 0 auto 0px;
+}
+
+.cl-main {
+  justify-content: center;
+  align-items: normal;
+  height: 100%;
+  width: 100%;
+  gap: 0px;
+  background: var(--color-primary-1);
+
 }
 
 .cl-sobre{
   display: flex;
-  width: 100%;
+  flex-direction: column;
+  background: var(--color-primary-1);
+  padding: 30px;
+
+}
+
+.cl-servicos{
+
+  background: var(--color-primary-2);
+  padding: 30px;
+}
+
+
+.cl-contato{
+    background: var(--color-primary-2);
+    padding: 30px;
 }
 
 .cl-paragrafo-sobre{
@@ -210,10 +236,18 @@ footer {
 /* Botão Luteria */
 
 .btn-luthier {
-  display: flex;
+  bottom: 60px;
+  right: 20px;
+
+  position: fixed;
+  padding: 5px;
+  text-decoration: none;
+
+  display: inline-flex;;
   justify-content: center;
   align-items: center;
   width: 250px;
+  height: 70px;
   background-color: var(--color-primary-2);
   color: var(--color-primary-1);
   font-family: 'Playfair Display', Georgia, serif;
@@ -221,6 +255,7 @@ footer {
   font-weight: 600;
   letter-spacing: 0.5px;
   text-decoration: none;
+  text-align: center;
 
   padding: 14px 28px;
   border-radius: 6px;
@@ -232,6 +267,7 @@ footer {
     transform 0.15s ease,
     box-shadow 0.15s ease,
     background-color 0.15s ease;
+  
 }
 
 .btn-luthier:hover {
