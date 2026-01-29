@@ -8,7 +8,7 @@
   --color-primary-4: #27291e;
 
   /* Neutrals */
-  --color-gray-50:  #F9FAFB;
+  --color-gray-50: #F9FAFB;
   --color-gray-100: #F3F4F6;
   --color-gray-300: #D1D5DB;
   --color-gray-700: #374151;
@@ -17,7 +17,7 @@
   /* Feedback */
   --color-success: #16A34A;
   --color-warning: #F59E0B;
-  --color-danger:  #DC2626;
+  --color-danger: #DC2626;
 
   /* Texturas botão luteria */
   --wood-primary: #D4A373;
@@ -36,6 +36,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
 }
 
 
@@ -47,7 +48,7 @@ body {
 }
 
 .cl-header {
-  background: var(--color-primary-3);
+  background: var(--color-primary-2);
   color: var(--font-color-primary-light);
   padding: 20px;
   display: flex;
@@ -70,7 +71,7 @@ nav a:hover {
   text-decoration: underline;
 }
 
-.hero {
+/* .hero {
   text-align: center;
   padding: 0px 0px;
   background: var(--color-primary-3);
@@ -84,7 +85,7 @@ nav a:hover {
 .hero p {
   max-width: 600px;
   margin: 0 auto 0px;
-}
+} */
 
 .cl-main {
   justify-content: center;
@@ -96,40 +97,130 @@ nav a:hover {
 
 }
 
-.cl-sobre{
+.cl-sobre {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
   background: var(--color-primary-3);
   color: var(--font-color-primary-light);
+  padding: 30px;
+  width: 100%;
+
+}
+
+.cl-paragrafo-sobre {
+  flex: 1;
+  width: 50%;
+  box-sizing: border-box;
+}
+
+.cl-imagem-sobre {
+  flex: 1;
+  width: 50%;
+  box-sizing: border-box;
+}
+
+.cl-imagem-sobre img {
+  width: 90%;
+  height: auto;
+  border-radius: 0px;
+}
+
+.cl-servicos {
+
+  background: var(--color-primary-1);
+  color: var(--font-color-primary-dark);
+  padding: 30px;
+}
+
+.cl-trabalhamos {
+  background: var(--color-primary-4);
+
+  color: var(--font-color-primary-light); 
+  padding: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+
+}
+
+.cl-trabalhos {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  background: var(--color-primary-4);
+  color: var(--font-color-primary-light); 
+
+}
+
+.cl-trabalhos-texto {
+  width: 50%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  align-content: center;
+  justify-content: space-between;
+
+}
+
+.cl-trabalhos-texto-titulo {
+  flex: 1;
+  width: 100%;
+
   padding: 30px;
 
 }
 
-.cl-servicos{
+.cl-trabalhos-texto-corpo {
+  flex: 1;
+  width: 100%;
 
+  padding: 30px;
+  width: 100%;
+  display: flex;
+}
+
+.cl-trabalhos-texto-corpo-1 {
+  flex: 1;
+  width: 50%;
+
+  padding: 30px;
+
+}
+
+.cl-trabalhos-texto-corpo-2 {
+  flex: 1;
+  width: 50%;
+
+  padding: 30px;
+
+}
+
+.cl-trabalhos-imagem {
+  width: 50%;
+
+}
+
+.cl-trabalhos-imagem img {
+  width: 90%;
+  height: auto;
+  border-radius: 0px;
+}
+
+.cl-contato {
   background: var(--color-primary-2);
   color: var(--font-color-primary-light);
   padding: 30px;
 }
 
 
-.cl-contato{
-    background: var(--color-primary-2);
-    color: var(--font-color-primary-light);
-    padding: 30px;
-}
 
-.cl-paragrafo-sobre{
-  width: 50%;
-  box-sizing: border-box;
-}
-
-.cl-imagem-sobre{
-  width: 50%;
-  box-sizing: border-box;
-}
-
-.cl-imagem-bancada img{
+.cl-imagem-bancada img {
   width: 50%;
   height: auto;
   border-radius: 8px;
@@ -250,7 +341,8 @@ footer {
   padding: 5px;
   text-decoration: none;
 
-  display: inline-flex;;
+  display: inline-flex;
+  ;
   justify-content: center;
   align-items: center;
   width: 250px;
@@ -274,7 +366,7 @@ footer {
     transform 0.15s ease,
     box-shadow 0.15s ease,
     background-color 0.15s ease;
-  
+
 }
 
 .btn-luthier:hover {
@@ -291,19 +383,47 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  
-  .cl-sobre{
-      
+
+  .cl-sobre {
+    flex-direction: column;
+    text-align: left;
   }
 
-  .cl-paragrafo-sobre, .cl-imagem-sobre{
-      width: 100%;
+  .cl-paragrafo-sobre,
+  .cl-imagem-sobre {
+    width: 100%;
   }
 
-  .cl-imagem-bancada img{
-      width: 100%;
-      margin-left: 0;
-      margin-top: 20px;
+  .cl-imagem-bancada img {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 20px;
   }
-  
+
+  .cl-trabalhos {
+    flex-direction: column;
+
+  }
+
+  .cl-trabalhos-texto {
+    width: 100%;
+  }
+
+  .cl-trabalhos-texto-titulo {
+    height: 10%;
+  }
+
+  .cl-trabalhos-texto-corpo {
+    height: 90%;
+  }
+
+  .cl-trabalhos-imagem {
+    width: 100%;
+    margin-top: 0px;
+  }
+
+  .cl-trabalhos-imagem img {
+    width: 100%;
+  }
+
 }
