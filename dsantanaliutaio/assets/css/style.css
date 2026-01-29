@@ -108,10 +108,18 @@ nav a:hover {
 
 }
 
-.cl-paragrafo-sobre {
+.cl-sobre-texto{
   flex: 1;
   width: 50%;
+  padding: 20px;
+  text-align: left; 
+}
+
+.cl-paragrafo-sobre {
+  flex: 1;
+  width: 100%;
   box-sizing: border-box;
+  text-align: justify;
 }
 
 .cl-imagem-sobre {
@@ -386,7 +394,14 @@ footer {
 
   .cl-sobre {
     flex-direction: column;
-    text-align: left;
+    
+    
+  }
+
+  .cl-sobre-texto{
+    width: 100%;
+    padding: 0px;
+    text-align: justify;
   }
 
   .cl-paragrafo-sobre,
