@@ -98,7 +98,7 @@ section {
 .hero {
   text-align: center;
   padding: 120px 0;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/dsantanaliutaiov1/assets/images/bancada-instrumentos-wide.png');
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/dsantanaliutaio/assets/img/bancada-instrumentos-wide.png');
   color: var(--color-primary-1);
 
 }
@@ -113,24 +113,33 @@ section {
 }
 
 #sobre {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url('/dsantanaliutaiov1/assets/images/img-build-by-demand.png');
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url('/dsantanaliutaio/assets/img/img-build-by-demand.png');
   /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); */
   display: flex;
   flex-direction: row;
   /* height: 100vh; */
-  
 
 }
 
 .cl-sobre-texto{
   flex: 1;
-  text-align: left;
-  vertical-align: bottom;
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  align-content: start;
+  justify-content: start;
+  
+}
+
+.cl-sobre-texto-ctn{
+
+text-align: justify;
+
 }
 
 .cl-sobre-texto h3, .cl-sobre-texto p{
 
-  padding: 30px 30px 30px 30px;
+  padding: 50px 100px 50px 100px;
 
 }
 
@@ -153,7 +162,7 @@ section {
 
 #servicos {
   /* background: linear-gradient(540deg, var(--color-primary-3), var(--color-primary-4)); */
-  background-image: url("/dsantanaliutaiov1/assets/images/bancada-instrumentos-wide-3.png");
+  background-image: url("/dsantanaliutaio/assets/img/bancada-instrumentos-wide-3.png");
   color: var(--font-color-primary-light);
 }
 
