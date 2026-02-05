@@ -124,10 +124,7 @@ section {
 .cl-sobre-texto{
   flex: 1;
   display: flex;
-  align-items: start;
-  justify-content: start;
-  align-content: start;
-  justify-content: start;
+
   
 }
 
@@ -344,9 +341,16 @@ text-align: justify;
 
 /* resonsividade / mobile */
 @media (max-width: 768px) {
+
   .contact-wrapper {
     grid-template-columns: 1fr;
   }
+}
+
+.cl-sobre-texto h3, .cl-sobre-texto p{
+
+  padding: 30px;
+
 }
 
 /* Footer */
