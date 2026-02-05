@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .cl-section {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            height: 500px;
+            background: gray;
+        }
+
+        .cl-section-title {
+            display: flex;
+            width: 50%;
+            height: 100%;
+            background: purple;
+
+            justify-content: start;
+            /*Centralizou o elemento left, right, center*/
+            justify-items: center;
+            justify-self: center;
+
+            text-align: center;
+
+            align-items: center;
+            /* Centralizou o elemento no top, botom, center */
+            align-content: center;
+        }
+
+        .cl-section-text {
+            display: flex;
+            width: 50%;
+            height: 100%;
+            background: blue;
+
+            /* Atributos que funcionam com a tag p */
+            /* align-items: center;
+            text-align: right; */
+
+            /* Atributos que não surtiram efeito */
+            justify-content: center;
+            justify-items: center;
+            justify-self: center;
+            align-content: space-around;
+
+        }
+
+        .cl-section-extra {
+            display: grid;
+            width: 100%;
+            height: 100%;
+            background: yellowgreen;
+            grid-template-rows: auto;
+        }
+
+        .cl-div1 {
+            width: 20px;
+            height: 20px;
+            background: blue;
+        }
+
+        .cl-div2 {
+            display: grid;
+            width: 20px;
+            height: 20px;
+            background: red
+            align-content: ;
+        }
+
+        .cl-div3 {
+            width: 20px;
+            height: 20px;
+        }
+
+        .cl-div4 {
+            width: 20px;
+            height: 20px;
+            
+        }
+
+        .cl-div4 {
+            width: 20px;
+            height: 20px;
+        }
+
+        .cl-div5 {
+            width: 20px;
+            height: 20px;
+        }
+
+        .cl-div6 {
+            width: 20px;
+            height: 20px;
+        }
+
+        .cl-div7 {
+            width: 20px;
+            height: 20px;
+        }
+
+        .cl-div8 {
+            width: 20px;
+            height: 20px;
+        }
+
+        .cl-div9 {
+            width: 20px;
+            height: 20px;
+        }
+
+        img {
+            width: 70%;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cl-section">
+        <div class="cl-section-title">
+            <h1>Meu título</h1>
+        </div>
+        <div class="cl-section-text">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit hic delectus nemo assumenda provident!
+                In laboriosam dolorem consequatur commodi sed reprehenderit quasi fuga vero id voluptates! Eveniet nulla
+                hic cumque.
+            </p>
+        </div>
+
+    </div>
+    <div class="cl-section-extra">
+        <div class="cl-div1">
+
+        </div>
+        <div class="cl-div2">
+            <img src="sorriso.jpg" class="cl-img">
+        </div>
+        <div class="cl-div1">
+
+        </div>
+    </div>
+</body>
+
+
+</html>

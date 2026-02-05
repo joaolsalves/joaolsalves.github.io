@@ -1,0 +1,617 @@
+/* Cores */
+
+:root {
+  /* Brand */
+  --color-primary-1: #f2f1c3;
+  --color-primary-2: #4a4a32;
+  --color-primary-3: #3f3e2a;
+  --color-primary-4: #27291e;
+
+  /* Neutrals */
+  --color-gray-50: #F9FAFB;
+  --color-gray-100: #F3F4F6;
+  --color-gray-300: #D1D5DB;
+  --color-gray-700: #374151;
+  --color-gray-900: #111827;
+
+  /* Feedback */
+  --color-success: #16A34A;
+  --color-warning: #F59E0B;
+  --color-danger: #DC2626;
+
+  /* Texturas botão luteria */
+  --wood-primary: #D4A373;
+  --wood-primary-hover: #B88958;
+  --wood-text: #3A2A1F;
+  --wood-shadow: #3A2A1F;
+  --wood-bg-soft: #FAF3E7;
+
+  /* Fontes */
+  --font-color-primary-dark: #2b2b2b;
+  --font-color-primary-light: #f2f1c3;
+
+  --pd-top: 113px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+html {
+  scroll-padding-top: 80px;
+}
+
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Lato', Arial, sans-serif;
+  color: #2b2b2b;
+  background: purple;
+  line-height: 1.6;
+
+}
+
+.cl-header {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  width: 100%;
+  height: var(--pd-top);
+  left: 0;
+  top: 0;
+  background: var(--color-primary-2);
+
+  color: var(--font-color-primary-light);
+
+}
+
+.cl-titulo-head {
+  flex: 1;
+  /* alinhamento horizontal */
+  justify-items: start;
+  /* alinhamento vertical */
+  align-content: center;
+
+}
+
+.cl-header-nav {
+  flex: 2;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-items: end;
+  align-content: center;
+  /* background: yellow; */
+
+}
+
+.cl-language {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background: orange; */
+
+}
+
+.cl-mynav {
+  flex: 10;
+  align-content: center;
+  justify-items: end;
+  /* background: green; */
+}
+
+header h1 {
+  font-size: 1.4rem;
+}
+
+nav a {
+  color: var(--font-color-primary-light);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+nav a:hover {
+  text-decoration: none;
+}
+
+/****** ABOUT *****/
+
+.cl-sobre {
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: var(--color-primary-3);
+  color: var(--font-color-primary-light);
+  /* min-height: calc(100vh - var(--pd-top)); */
+  ;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+
+}
+
+.cl-sobre-texto {
+  flex: 1;
+  padding: 100px;
+
+}
+
+.cl-sobre-imagem {
+  flex: 1;
+}
+
+.cl-sobre-imagem img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/****** SERVICES *****/
+.cl-services {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  min-height: calc(100vh - var(--pd-top));
+  background: var(--color-primary-1);
+  color: var(--font-color-primary-dark);
+  align-items: center;
+  align-content: center;
+  background: yellow;
+
+}
+
+.cl-services-title {
+  flex: 1;
+  width: 10%;
+  align-items: flex-end;
+
+}
+
+.cl-services-text {
+  flex: 1;
+  width: 45%;
+}
+
+.cl-services-img {
+  flex: 1;
+  width: 45%;
+
+}
+
+/****** TRABALHOS *****/
+
+.cl-trabalhos {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  height: calc(100vh - var(--pd-top));
+  background: var(--color-primary-4);
+  color: var(--font-color-primary-light);
+}
+
+.cl-trabalhos-texto {
+  width: 60%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  ;
+}
+
+.cl-trabalhos-texto-titulo {
+  flex: 1;
+  width: 100%;
+
+  padding: 0px;
+}
+
+.cl-trabalhos-texto-corpo {
+  flex: 1;
+  width: 100%;
+
+
+  width: 100%;
+  display: flex;
+}
+
+.cl-trabalhos-texto-corpo-1 {
+  flex: 1;
+  width: 50%;
+
+  padding: 30px;
+}
+
+.cl-trabalhos-texto-corpo-2 {
+  flex: 1;
+  width: 50%;
+
+  padding: 30px;
+}
+
+.cl-trabalhos-imagem {
+  width: 40%;
+}
+
+.cl-trabalhos-imagem img {
+  width: 90%;
+  height: auto;
+  border-radius: 0px;
+}
+
+/****** PORTFOLIO *****/
+
+.cl-portifolio {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  text-align: right;
+  padding: 0px;
+  width: 100%;
+  /* Largura da div c/ relação a tela */
+  height: calc(100vh - var(--pd-top));
+  ;
+  background: var(--color-primary-1);
+  color: var(--font-color-primary-dark);
+}
+
+.cl-portifolio-texto {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+
+}
+
+.cl-portifolio-texto-titulo {
+  flex: 1;
+
+}
+
+.cl-portifolio-texto-corpo {
+  padding: 30px;
+  flex: 1;
+}
+
+.cl-portifolio-imagem {
+  flex: 1;
+  display: flex;
+  background: blue;
+  align-items: end;
+  justify-content: end;
+  justify-items: end;
+}
+
+/****** CONTATO *****/
+
+.cl-contato {
+  flex: 1;
+  width: 100%;
+  background: var(--color-primary-2);
+  color: var(--font-color-primary-light);
+  padding: 30px;
+}
+
+/****** FOOTER *****/
+
+.cl-footer {
+  width: 100%;
+}
+
+.carousel-fade {
+  width: 100%;
+  height: auto;
+  align-items: start;
+}
+
+
+
+.cl-imagem-bancada img {
+  width: 50%;
+  height: auto;
+  border-radius: 8px;
+  margin-left: 20px;
+}
+
+.btn {
+  background: #5a3e2b;
+  color: #fff;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.btn:hover {
+  background: #3f2b1f;
+}
+
+section {
+  padding: 60px 20px;
+  margin: auto;
+}
+
+section h3 {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #5a3e2b;
+  display: inline-block;
+}
+
+#servicos ul {
+  list-style: none;
+}
+
+#servicos li {
+  margin-bottom: 10px;
+}
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.galeria img {
+  width: 100%;
+  border-radius: 4px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: var(--color-primary-3);
+  color: var(--font-color-primary-light);
+  font-size: 0.8rem;
+}
+
+/****** BUTTONS *****/
+
+.btn-whatsapp {
+  top: 70px;
+  right: 10px;
+}
+
+.btn-whatsapp:hover {
+  width: 51px;
+  height: 51px;
+}
+
+.btn-instagram {
+  top: 122px;
+  right: 10px;
+}
+
+.btn-instagram:hover {
+  width: 51px;
+  height: 51px;
+}
+
+.btn-facebook {
+  top: 174px;
+  right: 10px;
+}
+
+.btn-facebook:hover {
+  width: 51px;
+  height: 51px;
+}
+
+/****** IMAGE-BUTTONS *****/
+
+.img-logo-social {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  position: fixed;
+  padding: 5px;
+  text-decoration: none;
+}
+
+.img-menu-reponsivo {
+  width: 60px;
+  height: 60px;
+  display: inline-block;
+}
+
+/****** IMAGE-BUTTONS *****/
+
+
+/****** LUTHIERY-BUTTON *****/
+
+.btn-luthier {
+  bottom: 60px;
+  right: 20px;
+
+  position: fixed;
+  padding: 5px;
+  text-decoration: none;
+
+  display: inline-flex;
+  ;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 70px;
+  background-color: var(--color-primary-2);
+  color: var(--color-primary-1);
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  text-align: center;
+
+  padding: 14px 28px;
+  border-radius: 6px;
+  border: 2px solid var(--color-primary-4);
+  cursor: pointer;
+
+  box-shadow: 2px 2px 0px var(--color-primary-3);
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    background-color 0.15s ease;
+
+}
+
+.btn-luthier:hover {
+  background-color: var(--color-primary-3);
+}
+
+.btn-luthier:active {
+  transform: translate(3px, 3px);
+  box-shadow: 1px 1px 0 var(--color-primary-4);
+}
+
+/* Botão Luteria - FIM */
+
+/* Carousel */
+
+.carousel-fade {
+  position: relative;
+  width: 100%;
+  height: auto;
+
+  aspect-ratio: 1 / 2;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 0px;
+  background: #000;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+
+  /* TRATAMENTO PROFISSIONAL */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  opacity: 0;
+  animation: fade 15s infinite;
+}
+
+/* delays */
+.slide:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.slide:nth-child(2) {
+  animation-delay: 5s;
+}
+
+.slide:nth-child(3) {
+  animation-delay: 10s;
+}
+
+/* fade elegante */
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  35% {
+    opacity: 1;
+  }
+
+  45% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+
+/* Fim Carousel */
+
+/* animação fade */
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  40% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+
+/****** RESOPONSIVE-DESIGN *****/
+
+@media (max-width: 768px) {
+
+
+  /****** ABOUT *****/
+
+  .cl-sobre {
+    display: flex;
+    flex-direction: column-reverse;
+
+  }
+
+  .cl-sobre-texto {
+    flex: 1;
+    text-align: justify;
+    padding: 50px;
+  }
+
+  .cl-sobre-imagem {
+    flex: 1;
+
+    background: url("/dsantanaliutaio/assets/img/bancada_violino_ferramentas.png");
+    background-size: cover;
+  }
+
+
+  /****** PORTFOLIO *****/
+
+  .cl-portifolio {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    background: yellow;
+
+  }
+
+  .cl-portifolio-texto {
+    width: 50%;
+
+  }
+
+  .cl-portifolio-imagem {
+    width: 50%;
+  }
+
+}

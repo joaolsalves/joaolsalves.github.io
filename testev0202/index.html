@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Site Profissional</title>
+
+  <!-- CSS externo -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- EmailJS -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+</head>
+<body class="light">
+
+  <header>
+    <div class="container">
+      <nav>
+        <h1>Minha Marca</h1>
+
+        <!-- Botões -->
+        <div class="nav-actions">
+          <button id="toggle-theme" aria-label="Alternar tema">🌙</button>
+          <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+
+        <ul id="nav-menu">
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#trabalhos">Trabalhos</a></li>
+          <li><a href="#portfolio">Portfólio</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero fade-in">
+    <div class="container">
+      <h2>Soluções Profissionais para seu Negócio</h2>
+      <p>Desenvolvimento de projetos modernos, funcionais e focados em resultados.</p>
+    </div>
+  </section>
+
+  <section id="sobre" class="fade-in">
+    <div class="container">
+      <h3>Sobre</h3>
+      <p class="text-center">Sou um profissional focado em criar soluções digitais elegantes, eficientes e alinhadas aos objetivos do cliente.</p>
+    </div>
+  </section>
+
+  <section id="servicos" class="fade-in">
+    <div class="container">
+      <h3>Serviços</h3>
+      <div class="grid">
+        <div class="card">Web Design</div>
+        <div class="card">Desenvolvimento</div>
+        <div class="card">Consultoria</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="trabalhos" class="fade-in">
+    <div class="container">
+      <h3>Trabalhos</h3>
+      <div class="grid">
+        <div class="card">Projeto Corporativo</div>
+        <div class="card">Landing Page</div>
+        <div class="card">Sistema Web</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio" class="fade-in">
+    <div class="container">
+      <h3>Portfólio</h3>
+      <div class="grid">
+        <div class="portfolio-item">Projeto 1</div>
+        <div class="portfolio-item">Projeto 2</div>
+        <div class="portfolio-item">Projeto 3</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato" class="fade-in">
+    <div class="container">
+      <h3>Contato</h3>
+      <form id="contact-form">
+        <input type="text" name="name" placeholder="Nome" required />
+        <input type="email" name="email" placeholder="Email" required />
+        <textarea name="message" placeholder="Mensagem" required></textarea>
+        <button type="submit">Enviar</button>
+        <p id="form-status"></p>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 - Todos os direitos reservados</p>
+  </footer>
+
+  <!-- JS externo -->
+  <script src="script.js"></script>
+
+</body>
+</html>

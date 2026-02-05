@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Site Profissional</title>
+  <style>
+    :root {
+      --primary: #1f2933;
+      --secondary: #3f8cff;
+      --light: #f5f7fa;
+      --text: #333;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: #fff;
+      line-height: 1.6;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      background: #fff;
+      border-bottom: 1px solid #e5e7eb;
+      z-index: 1000;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 70px;
+    }
+
+    nav h1 {
+      font-size: 1.4rem;
+      color: var(--primary);
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: var(--secondary);
+    }
+
+    section {
+      padding: 80px 0;
+    }
+
+    section:nth-child(even) {
+      background: var(--light);
+    }
+
+    .hero {
+      text-align: center;
+      padding: 120px 0;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: var(--primary);
+    }
+
+    .hero p {
+      max-width: 600px;
+      margin: auto;
+      font-size: 1.1rem;
+    }
+
+    h3 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+      color: var(--primary);
+      text-align: center;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+
+    .card h4 {
+      margin-bottom: 10px;
+      color: var(--secondary);
+    }
+
+    .portfolio-item {
+      height: 180px;
+      background: #d1d5db;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      color: #555;
+    }
+
+    form {
+      max-width: 600px;
+      margin: auto;
+      display: grid;
+      gap: 15px;
+    }
+
+    input, textarea {
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    button {
+      padding: 14px;
+      background: var(--secondary);
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    button:hover {
+      opacity: 0.9;
+    }
+
+    footer {
+      background: var(--primary);
+      color: #fff;
+      text-align: center;
+      padding: 30px 0;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+      }
+
+      .hero h2 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <nav>
+        <h1>Minha Marca</h1>
+        <ul>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#trabalhos">Trabalhos</a></li>
+          <li><a href="#portfolio">Portfólio</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h2>Soluções Profissionais para seu Negócio</h2>
+      <p>Desenvolvimento de projetos modernos, funcionais e focados em resultados.</p>
+    </div>
+  </section>
+
+  <section id="sobre">
+    <div class="container">
+      <h3>Sobre</h3>
+      <p style="max-width:700px;margin:auto;text-align:center;">Sou um profissional focado em criar soluções digitais elegantes, eficientes e alinhadas aos objetivos do cliente.</p>
+    </div>
+  </section>
+
+  <section id="servicos">
+    <div class="container">
+      <h3>Serviços</h3>
+      <div class="grid">
+        <div class="card">
+          <h4>Web Design</h4>
+          <p>Interfaces modernas, responsivas e centradas no usuário.</p>
+        </div>
+        <div class="card">
+          <h4>Desenvolvimento</h4>
+          <p>Sites rápidos, seguros e com código bem estruturado.</p>
+        </div>
+        <div class="card">
+          <h4>Consultoria</h4>
+          <p>Orientação técnica e estratégica para seus projetos digitais.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="trabalhos">
+    <div class="container">
+      <h3>Trabalhos</h3>
+      <div class="grid">
+        <div class="card">Projeto Corporativo</div>
+        <div class="card">Landing Page</div>
+        <div class="card">Sistema Web</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio">
+    <div class="container">
+      <h3>Portfólio</h3>
+      <div class="grid">
+        <div class="portfolio-item">Projeto 1</div>
+        <div class="portfolio-item">Projeto 2</div>
+        <div class="portfolio-item">Projeto 3</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato">
+    <div class="container">
+      <h3>Contato</h3>
+      <form>
+        <input type="text" placeholder="Nome" required />
+        <input type="email" placeholder="Email" required />
+        <textarea placeholder="Mensagem" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 - Todos os direitos reservados</p>
+  </footer>
+
+</body>
+</html>

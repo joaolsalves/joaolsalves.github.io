@@ -1,0 +1,479 @@
+:root {
+  --primary: #1f2933;
+  --secondary: #3f8cff;
+  --bg: #ffffff;
+  --text: #333;
+
+  --color-primary-1: #f2f1c3;
+  --color-primary-2: #4a4a32;
+  --color-primary-3: #3f3e2a;
+  --color-primary-4: #27291e;
+
+  /* Fontes */
+  --font-color-primary-dark: #2b2b2b;
+  --font-color-primary-light: #f2f1c3;
+}
+
+body.dark {
+  --bg: #0f172a;
+  --text: #e5e7eb;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  transition: background 0.3s, color 0.3s;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  /* background: var(--bg); */
+  background: linear-gradient(135deg, var(--color-primary-4), var(--color-primary-2));
+  border-bottom: 1px solid #e5e7eb;
+  color: var(--font-color-primary-light);
+  z-index: 1000;
+}
+
+.container {
+  width: 90%;
+  /* max-width: 1100px; */
+  margin: auto;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+nav a {
+  text-decoration: none;
+  /* color: var(--text); */
+  color: var(--color-primary-1);
+}
+
+.nav-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 22px;
+  height: 3px;
+  /* background: var(--text); */
+  background: var(--font-color-primary-light);
+  color: white;
+}
+
+section {
+  padding: 80px 0;
+
+}
+
+.hero {
+  text-align: center;
+  padding: 120px 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/dsantanaliutaiov1/assets/images/bancada-instrumentos-wide.png');
+  color: var(--color-primary-1);
+
+}
+
+.hero h2,
+.hero p,
+.cl-sobre-texto h3,
+.cl-sobre-texto p {
+  background: var(--color-primary-2);
+  opacity: 0.6;
+  color: var(--color-primary-1);
+}
+
+#sobre {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url('/dsantanaliutaiov1/assets/images/img-build-by-demand.png');
+  /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); */
+  display: flex;
+  flex-direction: row;
+  /* height: 100vh; */
+  
+
+}
+
+.cl-sobre-texto{
+  flex: 1;
+  text-align: left;
+  vertical-align: bottom;
+}
+
+.cl-sobre-texto h3, .cl-sobre-texto p{
+
+  padding: 30px 30px 30px 30px;
+
+}
+
+
+.cl-sobre-img {
+  flex: 1;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  border-radius: 0px;
+}
+
+.cl-sobre-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* cobre a div sem distorcer */
+}
+
+
+#servicos {
+  /* background: linear-gradient(540deg, var(--color-primary-3), var(--color-primary-4)); */
+  background-image: url("/dsantanaliutaiov1/assets/images/bancada-instrumentos-wide-3.png");
+  color: var(--font-color-primary-light);
+}
+
+#trabalhos {
+  background: var(--color-primary-1);
+}
+
+#portfolio {
+  background: var(--color-primary-4);
+  color: var(--font-color-primary-light);
+}
+
+#contato {
+  background: var(--color-primary-1);
+  color: var(--font-color-primary-light);
+}
+
+#contato h3 {
+  color: var(--color-primary-2);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+
+  justify-items: center;
+}
+
+.card,
+.portfolio-item {
+  padding: 30px;
+  background: var(--color-primary-1);
+  border-radius: 8px;
+  color: var(--color-primary-4);
+
+}
+
+/* animação */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 0.6s ease;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Card */
+.card {
+  width: 320px;
+  background: whitesmoke;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-content h2 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #1f2933;
+}
+
+.card-content p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.card-content a {
+  display: inline-block;
+  text-decoration: none;
+  background: #3f8cff;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  transition: background 0.3s ease;
+}
+
+.card-content a:hover {
+  background: #2563eb;
+}
+
+/* Contato */
+
+.contact-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.contact-info h4 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.contact-info p {
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.contact-info ul {
+  list-style: none;
+}
+
+.contact-info li {
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+}
+
+.contact-form {
+  /* background: #f8fafc; */
+  background: var(--color-primary-2);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  font-size: 0.85rem;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  font-size: 0.95rem;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--secondary);
+}
+
+.btn-primary {
+  background: var(--secondary);
+  color: #fff;
+  padding: 14px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+/* resonsividade / mobile */
+@media (max-width: 768px) {
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Footer */
+.footer {
+  background: var(--color-primary-4);
+  color: var(--color-primary-1);
+  margin-top: 0px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  gap: 40px;
+  padding: 60px 0;
+  color: var(--color-primary-1);
+}
+
+.footer h4 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.footer h5 {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+}
+
+.footer p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+
+}
+
+.social-links {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+}
+
+.social-links a {
+  color: var(--color-primary-1);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.social-links a:hover {
+  text-decoration: none;
+}
+
+.footer-contact p {
+  margin-bottom: 8px;
+}
+
+.footer-map iframe {
+  width: 100%;
+  height: 180px;
+  border: 0;
+  border-radius: 10px;
+}
+
+.footer-bottom {
+  /* border-top: 1px solid var(--font-color-primary-dark); */
+  background: var(--color-primary-4);
+  text-align: center;
+  padding: 0px 0;
+  /* font-size: 0.85rem; */
+  font-size: clamp(1rem, 2.5vw, 2rem);
+
+}
+
+/****** BUTTONS *****/
+
+.btn-whatsapp:hover {
+  width: 51px;
+  height: 51px;
+}
+
+.btn-instagram:hover {
+  width: 51px;
+  height: 51px;
+}
+
+.btn-facebook:hover {
+  width: 51px;
+  height: 51px;
+}
+
+/****** IMAGE-BUTTONS *****/
+
+.img-logo-social {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  position: relative;
+  padding: 5px;
+  text-decoration: none;
+  flex-direction: row;
+}
+
+/* mobile */
+@media (max-width: 900px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-map iframe {
+    height: 220px;
+  }
+}
+
+
+/* mobile */
+@media (max-width: 768px) {
+  nav ul {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    /* background: var(--bg); */
+    background: var(--color-primary-3);
+
+    flex-direction: column;
+    width: 200px;
+    display: none;
+    padding: 20px;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  #sobre{
+    flex-direction: column;
+  }
+
+}

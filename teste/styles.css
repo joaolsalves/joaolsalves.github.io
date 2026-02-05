@@ -1,0 +1,36 @@
+.cl-titulo-principal-ptbr {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 20px;
+    background: yellow;
+    visibility: visible;
+    display: block;
+}
+
+.cl-titulo-principal-en {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 20px;
+    background: green;
+    visibility: hidden;
+}   
+
+.cl-flag-btbr{
+    /* visibility: hidden; */
+    display: 'block';
+}
+
+.cl-flag-en {
+    visibility: visible;
+    display: 'block';
+}
+
+.cl-btn{
+    width: 200px;
+    height: 200px;
+    background: green;
+    color: yellow;
+    
+}

@@ -1,0 +1,29 @@
+3 Empresas
+
+1-Ximenes Agropecuária
+
+Segmenteação de notas
+
+Despesas
+	Impostos
+	Contas de consumo
+	
+Como isso é segmentado para compor o RMA DRE
+
+
+Entradas 
+
+Que tipos de 
+
+Saídas 
+Danf-e (Quas dados dados das danfs devem ser armazenados?
+Vendas de Mercadoria
+Descrição do serviço
+
+Qual a parte mais complicada e trablhosa que deve ser automatizada?
+
+Quais são os objetos de importação para as análises?
+
+
+
+

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Idioma do Navegador</title>
+</head>
+<body>
+
+  <h1>Idioma do navegador</h1>
+  <p id="lang"></p>
+
+  <button class="verIdioma" onclick="verIdioma()">Ver idioma</button>
+
+  <div class="cl-idioma-navegador">
+
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const idioma = navigator.language || navigator.userLanguage;
+      document.getElementById("lang").textContent = `Idioma detectado: ${idioma}`;
+    });
+
+
+
+    function verIdioma(){
+
+        elemento = navigator.language
+
+        console.log(elemento);
+    }
+
+  </script>
+
+</body>
+</html>
