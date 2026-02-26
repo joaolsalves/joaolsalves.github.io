@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>200 Card Layouts</title>
+  <style>
+    :root {
+      --radius: 14px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f6f8;
+      padding: 40px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: var(--radius);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform .3s, box-shadow .3s;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px rgba(0,0,0,.15);
+    }
+
+    .card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+
+    .content {
+      padding: 16px;
+      flex: 1;
+    }
+
+    .content h3 {
+      margin: 0 0 8px;
+      font-size: 18px;
+    }
+
+    .content p {
+      margin: 0;
+      font-size: 14px;
+      line-height: 1.4;
+      color: #555;
+    }
+
+    .actions {
+      padding: 16px;
+      text-align: center;
+    }
+
+    .actions button {
+      border: none;
+      padding: 10px 16px;
+      border-radius: 999px;
+      cursor: pointer;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    /* VARIAÇÕES DE ESTILO (1 a 10) */
+    .style-1 { border: 2px solid #e63946; }
+    .style-1 button { background: #e63946; }
+
+    .style-2 { background: linear-gradient(180deg,#fff,#f1f1f1); }
+    .style-2 button { background: #457b9d; }
+
+    .style-3 { box-shadow: inset 0 0 0 2px #2a9d8f; }
+    .style-3 button { background: #2a9d8f; }
+
+    .style-4 img { filter: grayscale(100%); }
+    .style-4 button { background: #000; }
+
+    .style-5 { border-radius: 0; }
+    .style-5 button { background: #f4a261; }
+
+    .style-6 { background: #1d3557; color: #fff; }
+    .style-6 p { color: #ddd; }
+    .style-6 button { background: #e63946; }
+
+    .style-7 img { height: 220px; }
+    .style-7 button { background: #6a4c93; }
+
+    .style-8 { text-align: center; }
+    .style-8 button { background: #ff006e; }
+
+    .style-9 { border-left: 6px solid #00b4d8; }
+    .style-9 button { background: #00b4d8; }
+
+    .style-10 { background: radial-gradient(circle at top,#fff,#ddd); }
+    .style-10 button { background: #3a86ff; }
+  </style>
+</head>
+<body>
+
+<h1>200 Tipos de Card Layouts</h1>
+
+<div class="grid" id="grid"></div>
+
+<script>
+  const grid = document.getElementById('grid');
+
+  for (let i = 1; i <= 200; i++) {
+    const style = (i % 10) + 1;
+
+    const card = document.createElement('div');
+    card.className = `card style-${style}`;
+
+    card.innerHTML = `
+      <img src="https://picsum.photos/400/300?random=${i}" alt="Imagem ${i}">
+      <div class="content">
+        <h3>Card Layout ${i}</h3>
+        <p>Exemplo de variação visual de card com imagem, texto e botão.</p>
+      </div>
+      <div class="actions">
+        <button>Ver mais</button>
+      </div>
+    `;
+
+    grid.appendChild(card);
+  }
+</script>
+
+</body>
+</html>

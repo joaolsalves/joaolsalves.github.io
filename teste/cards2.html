@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>10 Tipos de Cards</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f2f2f2;
+  padding: 40px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+/* Base */
+.card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: 0.3s;
+  position: relative;
+}
+
+.card img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+}
+
+.card .content {
+  padding: 15px;
+}
+
+.card h3 {
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.card button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  background: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card button:hover {
+  background: #0056b3;
+}
+
+/* 1 - Card simples */
+.card.simple {}
+
+/* 2 - Card com sombra forte */
+.card.shadow {
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* 3 - Card com borda colorida */
+.card.border {
+  border: 3px solid #00c853;
+}
+
+/* 4 - Card com hover lift */
+.card.lift:hover {
+  transform: translateY(-10px);
+}
+
+/* 5 - Card com zoom na imagem */
+.card.zoom img {
+  transition: 0.4s;
+}
+.card.zoom:hover img {
+  transform: scale(1.1);
+}
+
+/* 6 - Card com overlay */
+.card.overlay::after {
+  content: "Detalhes";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  opacity: 0;
+  transition: 0.3s;
+}
+.card.overlay:hover::after {
+  opacity: 1;
+}
+
+/* 7 - Card horizontal */
+.card.horizontal {
+  display: flex;
+}
+.card.horizontal img {
+  width: 40%;
+  height: auto;
+}
+
+/* 8 - Card com botão full */
+.card.full button {
+  width: 100%;
+}
+
+/* 9 - Card glassmorphism */
+.card.glass {
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+/* 10 - Card dark */
+.card.dark {
+  background: #222;
+  color: #fff;
+}
+.card.dark p {
+  color: #ccc;
+}
+.card.dark button {
+  background: #ff9800;
+}
+</style>
+</head>
+
+<body>
+
+<h1>10 Tipos de Cards</h1>
+
+<div class="cards">
+
+  <div class="card simple">
+    <img src="https://picsum.photos/400/200?1">
+    <div class="content">
+      <h3>Card Simples</h3>
+      <p>Layout básico e limpo.</p>
+      <button>Ver mais</button>
+    </div>
+  </div>
+
+  <div class="card shadow">
+    <img src="https://picsum.photos/400/200?2">
+    <div class="content">
+      <h3>Card com Sombra</h3>
+      <p>Destaque com sombra forte.</p>
+      <button>Ver mais</button>
+    </div>
+  </div>
+
+  <div class="cl-card cl-border">
+    <img src="https://picsum.photos/400/200?3">
+    <div class="cl-content">
+      <h3>Card com Borda</h3>
+      <p>Borda colorida moderna.</p>
+      <button>Ver mais</button>
+    </div>
+  </div>
+
+  <div class="card lift">
+    <img src="https://picsum.photos/400/200?4">
+    <div class="content">
+      <h3>Card Hover Lift</h3>
+      <p>Eleva ao passar o mouse.</p>
+      <button>Ver mais</button>
+    </div>
+  </div>
+
+  <div class="card zoom">
+    <img src="https://picsum.photos/400/200?5">
+    <div class="content">
+      <h3>Zoom na Imagem</h3>
+      <p>Efeito de aproximação.</p>
+      <button>Ver mais</button>
+    </div>
+  </div>
+
+  <div class="card overlay">
+    <img src="https://picsum.photos/400/200?6">
+    <div class="content">
+      <h3>Overlay</h3>
+      <p>Texto sobre a imagem.</p>
+      <button>Ver mais</button>
+    </div>
+  </div>
+
+  <div class="card horizontal">
+    <img src="https://picsum.photos/400/200?7">
+    <div class="content">
+      <h3>Card Horizontal</h3>
+      <p>Imagem ao lado do texto.</p>
+      <button>Ver mais</button>
+    </div>
+  </div>
+
+  <div class="card full">
+    <img src="https://picsum.photos/400/200?8">
+    <div class="content">
+      <h3>Botão Full</h3>
+      <p>Botão ocupa toda largura.</p>
+      <button>Ver mais</button>
+    </div>
+  </div>
+
+  <div class="card glass">
+    <img src="https://picsum.photos/400/200?9">
+    <div class="content">
+      <h3>Glassmorphism</h3>
+      <p>Efeito vidro moderno.</p>
+      <button>Ver mais</button>
+    </div>
+  </div>
+
+  <div class="card dark">
+    <img src="https://picsum.photos/400/200?10">
+    <div class="content">
+      <h3>Card Dark</h3>
+      <p>Visual escuro elegante.</p>
+      <button>Ver mais</button>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

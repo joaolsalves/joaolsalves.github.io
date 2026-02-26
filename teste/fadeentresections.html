@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fade entre Sections</title>
+
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  /* MENU */
+  nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #0f172a;
+    padding: 15px;
+    z-index: 1000;
+  }
+
+  nav a {
+    color: #fff;
+    margin-right: 20px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  /* SECTIONS */
+  section {
+    min-height: 100vh;
+    padding: 120px 40px 40px;
+    box-sizing: border-box;
+
+    /* FADE IN */
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+
+  section.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  #home    { background: #e0e7ff; }
+  #sobre   { background: #cffafe; }
+  #servicos{ background: #dcfce7; }
+  #contato { background: #ffe4e6; }
+
+  h1 {
+    margin-top: 0;
+  }
+</style>
+</head>
+
+<body>
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#sobre">Sobre</a>
+  <a href="#servicos">Serviços</a>
+  <a href="#contato">Contato</a>
+</nav>
+
+<section id="home">
+  <h1>Home</h1>
+  <p>Section aparece com fade ao entrar na tela.</p>
+</section>
+
+<section id="sobre">
+  <h1>Sobre</h1>
+  <p>Efeito suave e profissional, sem bibliotecas.</p>
+</section>
+
+<section id="servicos">
+  <h1>Serviços</h1>
+  <p>Funciona tanto no scroll quanto ao clicar no menu.</p>
+</section>
+
+<section id="contato">
+  <h1>Contato</h1>
+  <p>Intersection Observer é o padrão moderno.</p>
+</section>
+
+<script>
+  const sections = document.querySelectorAll("section");
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("active");
+      }
+    });
+  }, {
+    threshold: 0.3
+  });
+
+  sections.forEach(section => observer.observe(section));
+
+// Menu hamburguer
+
+
+  
+</script>
+
+</body>
+</html>

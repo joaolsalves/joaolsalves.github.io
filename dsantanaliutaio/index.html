@@ -1,238 +1,37 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>dsantanaliutaio</title>
+  <meta charset="UTF-8">
+  <title>Redirecting...</title>
+  <script>
+    (function () {
+      const languages = navigator.languages || [navigator.language];
 
-  <!-- CSS externo -->
-  <link rel="stylesheet" href="styles.css" />
+      let redirectTo = "/en/index.html";
 
-  <!-- EmailJS -->
-  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+      for (let lang of languages) {
+        lang = lang.toLowerCase();
+
+        if (lang === "pt-br" || lang.startsWith("pt")) {
+          redirectTo = "/dsantanaliutaio/pages/pt-br/index.html";
+          break;
+        }
+
+        if (lang.startsWith("en")) {
+          redirectTo = "/dsantanaliutaio/pages/en/index.html";
+          break;
+        }
+      }
+
+      window.location.replace(redirectTo);
+    })();
+  </script>
 </head>
-
-<body class="light">
-
-  <header>
-    <div class="container">
-      <nav>
-        <a href="/dsantanaliutaio/">
-          <h1>dsantanaliutaio</h1>
-        </a>
-
-        <!-- Botões -->
-        <div class="nav-actions">
-          <div id="toggle-theme" aria-label="Alternar tema"></div>
-          <button class="hamburger" id="hamburger" aria-label="Menu">
-            <span></span><span></span><span></span>
-          </button>
-        </div>
-
-        <ul id="nav-menu">
-          <li><a href="#sobre">Sobre</a></li>
-          <li><a href="#servicos">Serviços</a></li>
-          <li><a href="#trabalhos">Trabalhos</a></li>
-          <li><a href="#portfolio">Portfólio</a></li>
-          <li><a href="#contato">Contato</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <section class="hero fade-in">
-    <div class="container">
-      <h2>Especialista em luthieria, apaixonado por criar e restaurar</h2>
-      <p>Formação em luthieria com base em Cremona (Itália), nos métodos estruturais e madeiras da Alemanha.</p>
-    </div>
-  </section>
-
-  <section id="sobre" class="fade-in">
-    <div class="container cl-sobre-texto">
-      <div class="cl-sobre-texto-ctn">
-        <h3>Sobre</h3>
-        <p>Somos especialistas em luthieria, apaixonados por criar e restaurar instrumentos musicais
-          com precisão e cuidado.<br>
-          Nossa equipe altamente qualificada se dedica a oferecer serviços de excelência,
-          garantindo que cada instrumento tenha um som único e de qualidade superior.</p>
-      </div>
-    </div>
-    <div class="cl-sobre-img">
-      <img src="/dsantanaliutaio/assets/img/luthieri/luthieri-3violinos-1x1.jpg" alt="Imagem Responsiva">
-    </div>
-  </section>
-
-  <section id="servicos" class="fade-in">
-    <div class="container">
-      <h3>Serviços</h3><br>
-      <div class="grid">
-
-        <div class="card">
-          <img src="/dsantanaliutaio/assets/img/img-build-by-demand.png" alt="Construção sob encomenda" />
-          <div class="card-content">
-            <h2>Construção sob encomenda</h2>
-            <a href="#">Saiba mais</a>
-          </div>
-        </div>
-        <div class="card">
-          <img src="/dsantanaliutaio/assets/img/bancada-instrumentos-wide.png" alt="Reformas" />
-          <div class="card-content">
-            <h2>Reformas</h2>
-            <a href="#">Saiba mais</a>
-          </div>
-        </div>
-        <div class="card">
-          <img src="/dsantanaliutaio/assets/img/bancada-instrumentos-wide-3.png" alt="Restauração" />
-          <div class="card-content">
-            <h2>Restauração</h2>
-            <a href="#">Saiba mais</a>
-          </div>
-        </div>
-        <div class="card">
-          <img src="/dsantanaliutaio/assets/img/img-violino-reforma.png" alt="Montagem" />
-          <div class="card-content">
-            <h2>Montagem</h2>
-            <a href="#">Saiba mais</a>
-          </div>
-        </div>
-        <div class="card">
-          <img src="/dsantanaliutaio/assets/img/img-violino-reforma-arco.png" alt="Ajustes" />
-          <div class="card-content">
-            <h2>Ajustes</h2>
-            <a href="#">Saiba mais</a>
-          </div>
-        </div>
-        <div class="card">
-          <img src="/dsantanaliutaio/assets/img/img-violino-stradi.png" alt="Acessórios" />
-          <div class="card-content">
-            <h2>Acessórios</h2>
-            <a href="#">Saiba mais</a>
-          </div>
-        </div>
-
-        <div class="card">
-          <img src="/dsantanaliutaio/assets/img/instrumentos/WhatsApp Image 2026-02-03 at 08.22.50 (1).jpeg"
-            alt="Acessórios" />
-          <div class="card-content">
-            <h2>Acessórios</h2>
-            <a href="#">Saiba mais</a>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <section id="trabalhos" class="fade-in">
-    <div class="container">
-      <h3>Trabalhamos com os modelos</h3><br>
-      <div class="grid">
-        <div class="card">Stradvari</div>
-        <div class="card">Guarneri</div>
-
-        <div class="card">Amati</div>
-        <div class="card">Jacob Stainer</div>
-        <div class="card">Gasparo da Salo</div>
-        <div class="card">E vários outros modelos</div>
-      </div>
-    </div>
-  </section>
-
-  <section id="portfolio" class="fade-in">
-    <div class="container">
-      <h3>Portfólio</h3><br>
-      <div class="grid">
-        <div class="portfolio-item">Restauração de violino antigo</div>
-        <div class="portfolio-item">Construção de viola personalizada</div>
-        <div class="portfolio-item">Violinos</div>
-        <div class="portfolio-item">Violas</div>
-        <div class="portfolio-item">Cellos</div>
-      </div>
-    </div>
-  </section>
-
-  <section id="contato" class="fade-in">
-    <div class="container">
-      <h3>Contato</h3><br>
-      <form id="contact-form" class="contact-form">
-        <div class="form-group">
-          <label>Nome</label>
-          <input type="text" name="name" placeholder="Seu nome completo" required />
-        </div>
-
-        <div class="form-group">
-          <label>Email</label>
-          <input type="email" name="email" placeholder="seu@email.com" required />
-        </div>
-
-        <div class="form-group">
-          <label>Mensagem</label>
-          <textarea name="message" placeholder="Descreva brevemente sua necessidade" required></textarea>
-        </div>
-
-        <button type="submit" class="btn-primary">Enviar mensagem</button>
-        <p id="form-status"></p>
-      </form>
-    </div>
-  </section>
-
-
-  <footer class="footer">
-    <div class="container footer-grid">
-      <div class="footer-brand">
-        <h4>dsantanaliutaio</h4>
-        <p>Nossa equipe altamente qualificada se dedica a oferecer serviços de excelência, garantindo que cada
-          instrumento tenha um som único e de qualidade superior.</p>
-
-      </div>
-
-      <div class="footer-contact">
-        <h5>Contato</h5>
-        <p>Email: dsantanaliutaio@gmail.com</p>
-        <p>Telefone: +1 (941) 404-5278</p>
-        <p>Endereço: Av. Exemplo, 123 · Centro · Cidade/UF</p>
-        <div class="img-logo-social">
-
-          <a href="https://wa.me/19414045278" target="_blank" rel="noopener noreferrer" class="btn-whatsapp zindex-1">
-            <img src="/dsantanaliutaio/assets/img/logo-whatsapp.png" class="img-logo-social btn-whatsapp" />
-          </a>
-          <a href="https://www.instagram.com/joaolsalves" target="_blank" rel="noopener noreferrer"
-            class="btn-instagram zindex-1">
-            <img src="/dsantanaliutaio/assets/img/logo-instagram.png" class="img-logo-social btn-instagram" />
-          </a>
-          <a href="https://web.facebook.com/joaolsalves" target="_blank" rel="noopener noreferrer"
-            class="btn-facebook zindex-1">
-            <img src="/dsantanaliutaio/assets/img/logo-facebook.png" class="img-logo-social btn-facebook" />
-          </a>
-        </div>
-      </div>
-
-
-      <div class="footer-map">
-        <h5>Localização</h5>
-        <!-- <iframe src="https://www.google.com/maps?q=Av.%20Paulista%201000&output=embed" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"> -->
-
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2946.0493177451813!2d-74.04822988991667!3d40.68969898779525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25090129c363d%3A0x40c6a5770d25022b!2sEstatua%20da%20Liberdade!5e1!3m2!1spt-BR!2sbr!4v1770214706315!5m2!1spt-BR!2sbr"
-          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </iframe>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      <p>© 2026 · dsantanaliutaio · Todos os direitos reservados</p>
-    </div>
-  </footer>
-
-
-
-
-  <!-- JS externo -->
-  <script src="script.js"></script>
-
+<body>
+  <noscript>
+    <p>Please select your language:</p>
+    <a href="/pt-br/index.html">Português</a> |
+    <a href="/en/index.html">English</a>
+  </noscript>
 </body>
-
 </html>

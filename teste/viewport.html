@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Viewport Size</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f4f4;
+        }
+
+        .viewport-label {
+            padding: 12px 20px;
+            background: #1e293b;
+            color: #ffffff;
+            font-size: 16px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="viewport-label" id="viewportLabel">
+        Viewport: 0 × 0
+    </div>
+
+    <script>
+        function updateViewportSize() {
+            const width = window.innerWidth;
+            const height = window.innerHeight;
+
+            document.getElementById('viewportLabel').textContent =
+                `Viewport: ${width}px × ${height}px`;
+        }
+
+        // Atualiza ao carregar
+        updateViewportSize();
+
+        // Atualiza ao redimensionar
+        window.addEventListener('resize', updateViewportSize);
+    </script>
+
+</body>
+</html>
