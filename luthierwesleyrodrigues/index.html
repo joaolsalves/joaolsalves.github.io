@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luthier Wesley Rodrigues</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Libre+Baskerville:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+    <style>
+        /* ================= BASE ================= */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Libre Baskerville', serif;
+            color: #eee;
+            background:
+                linear-gradient(rgba(0, 0, 0, .92), rgba(0, 0, 0, .92)),
+                url('https://www.transparenttextures.com/patterns/wood-pattern.png');
+            background-attachment: fixed;
+        }
+
+        :root {
+            --vermelho: #7a0000;
+            --vermelho-hover: #a10000;
+            --dourado: #c4a35a;
+        }
+
+        /* ================= HEADER ================= */
+        header {
+            position: fixed;
+            width: 100%;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: .4s;
+            z-index: 1000;
+        }
+
+        header.scrolled {
+            background: #000;
+            border-bottom: 1px solid var(--vermelho);
+            padding: 15px 8%;
+        }
+
+        .logo {
+            font-family: 'Cinzel', serif;
+            color: var(--dourado);
+            font-size: 20px;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            letter-spacing: 1px;
+            transition: .3s;
+        }
+
+        nav a:hover {
+            color: var(--dourado);
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 26px;
+            cursor: pointer;
+        }
+
+        /* ================= HERO ================= */
+        .hero {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .hero video {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: .25;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 50px;
+            color: var(--dourado);
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 20px;
+        }
+
+        .busto {
+            width: 100px;
+            height: 100px;
+            margin: 30px auto;
+            border: 2px solid var(--vermelho);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: url("/foto-wesley.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+
+        /* ================= SECTIONS ================= */
+        section {
+            padding: 100px 8%;
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all .8s ease;
+        }
+
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        section h2 {
+            font-family: 'Cinzel', serif;
+            color: var(--dourado);
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        /* ================= GRID ================= */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: #111;
+            border: 1px solid var(--vermelho);
+            padding: 20px;
+            transition: .4s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(122, 0, 0, .4);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        .card strong {
+            color: var(--dourado);
+        }
+
+        /* ================= SERVIÇOS ================= */
+        .services ul {
+            columns: 2;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .services li {
+            margin-bottom: 12px;
+        }
+
+        /* ================= DEPOIMENTOS ================= */
+        .testimonial {
+            max-width: 700px;
+            margin: auto;
+            text-align: center;
+            font-size: 20px;
+            min-height: 120px;
+            transition: opacity .6s;
+        }
+
+        /* ================= FORM ================= */
+        form {
+            max-width: 600px;
+            margin: auto;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            background: #111;
+            border: 1px solid var(--vermelho);
+            color: white;
+        }
+
+        button {
+            background: var(--vermelho);
+            border: none;
+            padding: 12px 25px;
+            color: white;
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        button:hover {
+            background: var(--vermelho-hover);
+        }
+
+        /* ================= FOOTER ================= */
+        footer {
+            background: #000;
+            padding: 60px 8%;
+            text-align: center;
+            border-top: 1px solid var(--vermelho);
+        }
+
+        .social a {
+            margin: 0 15px;
+            color: white;
+            text-decoration: none;
+        }
+
+        iframe {
+            width: 100%;
+            height: 250px;
+            margin-top: 20px;
+            border: 0;
+        }
+
+        /* ================= RESPONSIVO ================= */
+        @media(max-width:900px) {
+            .services ul {
+                columns: 1;
+            }
+
+            nav ul {
+                position: fixed;
+                right: -100%;
+                top: 70px;
+                flex-direction: column;
+                background: #000;
+                width: 240px;
+                height: 100vh;
+                padding: 40px;
+                transition: .4s;
+            }
+
+            nav ul.active {
+                right: 0;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header id="header">
+        <div class="logo">LOGOMARCA</div>
+        <nav>
+            <div class="menu-toggle" id="toggle">☰</div>
+            <ul id="menu">
+                <li><a href="#hero">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#portfolio">Portfólio</a></li>
+                <li><a href="#produtos">Vendas</a></li>
+                <li><a href="#depoimentos">Depoimentos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" id="hero">
+        <video autoplay muted loop>
+            
+            <source src="/istockphoto-1288912736-640_adpp_is.mp4" type="video/mp4">
+        </video>
+        <div class="hero-content">
+            <h1>Luthier Wesley Rodrigues</h1>
+            <p>Construção de instrumentos de cordas friccionadas com mão de obra especializada para músicos de
+                orquestra.</p>
+            <!-- <div class="busto"></div> -->
+        </div>
+    </section>
+
+    <section id="sobre">
+        <h2>Sobre o Luthier</h2>
+        <p style="max-width:800px;margin:auto;text-align:center;">
+            Especialista em violinos, violas e cellos. Excelência artesanal em construção, reformas, ajustes e
+            restaurações.
+        </p>
+    </section>
+
+    <section id="servicos" class="services">
+        <h2>Serviços</h2>
+        <ul>
+            <li>Construção de Violinos</li>
+            <li>Construção de Violas</li>
+            <li>Construção de Cellos</li>
+            <li>Restauração Completa</li>
+            <li>Reformas Estruturais</li>
+            <li>Ajuste de Alma</li>
+            <li>Regulagem de Cavalete</li>
+            <li>Troca de Espelho</li>
+            <li>Envernizamento Artesanal</li>
+            <li>Manutenção Preventiva</li>
+        </ul>
+    </section>
+
+    <section id="portfolio">
+        <h2>Portfólio</h2>
+        <div class="grid">
+            <script>
+                for (let i = 1; i <= 6; i++) {
+                    document.write(`<div class="card">
+<img src="https://plchldr.co/i/600x400/667eea/ffffff">
+<h3>Trabalho ${i}</h3>
+<p>Construção ou restauração artesanal.</p>
+</div>`);
+                }
+            </script>
+        </div>
+    </section>
+
+    <section id="produtos">
+        <h2>Instrumentos à Venda</h2>
+        <div class="grid">
+            <script>
+                for (let i = 1; i <= 5; i++) {
+                    document.write(`<div class="card">
+<img src="https://plchldr.co/i/600x400/667eea/ffffff">
+<h3>Instrumento ${i}</h3>
+<p>Construção artesanal para orquestra.</p>
+<strong>R$ ${(8000 + i * 350)}</strong>
+</div>`);
+                }
+            </script>
+        </div>
+    </section>
+
+    <section id="depoimentos">
+        <h2>Depoimentos</h2>
+        <div class="testimonial" id="testimonial"></div>
+    </section>
+
+    <section id="contato">
+        <h2>Contato</h2>
+        <form id="contact-form">
+            <input type="text" name="name" placeholder="Nome" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <textarea name="message" rows="5" placeholder="Mensagem"></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>Rua Exemplo, 123 - Cidade - Estado</p>
+        <p>Telefone: (11) 99999-9999</p>
+
+        <div class="social">
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">WhatsApp</a>
+        </div>
+
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1371.8668018280841!2d-43.1818019519972!3d-22.89685783354868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997f5a6615c3e7%3A0x3f311c24ed97b20!2sMuseu%20de%20Arte%20do%20Rio!5e1!3m2!1spt-BR!2sbr!4v1772282370691!5m2!1spt-BR!2sbr"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        <p>© 2026 Luthier Wesley Rodrigues</p>
+    </footer>
+
+    <script>
+
+        /* HEADER SCROLL */
+        window.addEventListener("scroll", () => {
+            document.getElementById("header").classList.toggle("scrolled", window.scrollY > 50);
+        });
+
+        /* MENU */
+        const toggle = document.getElementById("toggle");
+        const menu = document.getElementById("menu");
+        toggle.onclick = () => menu.classList.toggle("active");
+        document.querySelectorAll("#menu a").forEach(link => {
+            link.onclick = () => menu.classList.remove("active");
+        });
+
+        /* ANIMAÇÃO AO ROLAR */
+        const sections = document.querySelectorAll("section");
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add("visible");
+            });
+        }, { threshold: 0.2 });
+        sections.forEach(sec => observer.observe(sec));
+
+        /* DEPOIMENTOS */
+        const depoimentos = [
+            "Sonoridade impecável – Eduardo Almeida",
+            "Acabamento refinado – Mariana Lopes",
+            "Meu cello ganhou nova vida – Carlos Mendes",
+            "Precisão técnica admirável – Fernanda Rocha",
+            "Excelência artesanal – Ricardo Martins",
+            "Recomendo a todos músicos – Juliana Prado",
+            "Ajuste perfeito – André Farias",
+            "Qualidade superior – Beatriz Campos",
+            "Detalhes impressionantes – Paulo Nogueira",
+            "O melhor luthier que já conheci – Camila Torres"
+        ];
+
+        let i = 0;
+        const box = document.getElementById("testimonial");
+        function trocar() {
+            box.style.opacity = 0;
+            setTimeout(() => {
+                box.innerText = depoimentos[i];
+                box.style.opacity = 1;
+                i = (i + 1) % depoimentos.length;
+            }, 500);
+        }
+        trocar();
+        setInterval(trocar, 8000);
+
+        /* EMAILJS */
+        (function () { emailjs.init("YOUR_PUBLIC_KEY"); })();
+        document.getElementById("contact-form").addEventListener("submit", function (e) {
+            e.preventDefault();
+            emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", this)
+                .then(() => alert("Mensagem enviada!"),
+                    () => alert("Erro ao enviar."));
+        });
+
+    </script>
+
+</body>
+
+</html>

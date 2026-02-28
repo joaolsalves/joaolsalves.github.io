@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luthier Wesley Rodrigues</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<style>
+
+/* ================= RESET ================= */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:#0b0b0b;
+  color:#f5f5f5;
+  font-family:'Cormorant Garamond', serif;
+  line-height:1.6;
+}
+
+h1,h2,h3{
+  font-family:'Cinzel', serif;
+  letter-spacing:1px;
+}
+
+section{
+  padding:100px 20px;
+  max-width:1200px;
+  margin:auto;
+  opacity:0;
+  transform:translateY(40px);
+  transition:1s ease;
+}
+
+section.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* ================= HEADER ================= */
+
+header{
+  position:fixed;
+  width:100%;
+  background:rgba(0,0,0,0.95);
+  padding:15px 40px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  z-index:1000;
+  border-bottom:1px solid #7a0000;
+}
+
+.logo{
+  width:160px;
+  height:60px;
+  background:#111;
+  border:1px solid #7a0000;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family:'Cinzel';
+  color:#c8a75e;
+}
+
+nav ul{
+  list-style:none;
+  display:flex;
+  gap:30px;
+}
+
+nav a{
+  text-decoration:none;
+  color:#f5f5f5;
+  font-weight:500;
+  transition:.3s;
+}
+
+nav a:hover{
+  color:#c8a75e;
+}
+
+/* MENU MOBILE */
+
+.menu-toggle{
+  display:none;
+  flex-direction:column;
+  cursor:pointer;
+}
+
+.menu-toggle span{
+  height:3px;
+  width:25px;
+  background:#fff;
+  margin:4px 0;
+}
+
+@media(max-width:900px){
+  nav ul{
+    position:absolute;
+    top:80px;
+    right:0;
+    background:#111;
+    width:250px;
+    flex-direction:column;
+    padding:30px;
+    transform:translateX(100%);
+    transition:.4s;
+  }
+
+  nav ul.active{
+    transform:translateX(0);
+  }
+
+  .menu-toggle{
+    display:flex;
+  }
+}
+
+/* ================= HERO ================= */
+
+.hero{
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:40px;
+}
+
+.hero-text{
+  flex:1;
+}
+
+.hero-text h1{
+  font-size:48px;
+  color:#c8a75e;
+}
+
+.hero-text h2{
+  font-size:22px;
+  margin:20px 0;
+  color:#ccc;
+}
+
+.hero-banner{
+  background:#7a0000;
+  padding:15px 30px;
+  display:inline-block;
+  margin-top:20px;
+  font-size:18px;
+}
+
+.hero-img{
+  flex:1;
+  height:400px;
+  background:#222;
+  border:2px solid #7a0000;
+}
+
+/* ================= GRID ================= */
+
+.grid{
+  display:grid;
+  gap:30px;
+}
+
+@media(min-width:900px){
+  .grid-3{ grid-template-columns:repeat(3,1fr); }
+  .grid-2{ grid-template-columns:repeat(2,1fr); }
+}
+
+.card{
+  background:#111;
+  padding:25px;
+  border:1px solid #7a0000;
+  transition:.4s;
+}
+
+.card:hover{
+  transform:translateY(-5px);
+  border-color:#c8a75e;
+}
+
+/* ================= FORM ================= */
+
+form{
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+}
+
+input, textarea{
+  padding:10px;
+  border:none;
+  background:#1a1a1a;
+  color:#fff;
+}
+
+button{
+  padding:12px;
+  background:#7a0000;
+  color:#fff;
+  border:none;
+  cursor:pointer;
+  transition:.3s;
+}
+
+button:hover{
+  background:#c8a75e;
+  color:#000;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+  background:#000;
+  padding:50px 20px;
+  border-top:1px solid #7a0000;
+}
+
+.footer-grid{
+  max-width:1200px;
+  margin:auto;
+  display:grid;
+  gap:40px;
+}
+
+@media(min-width:900px){
+  .footer-grid{
+    grid-template-columns:repeat(3,1fr);
+  }
+}
+
+.social a{
+  color:#c8a75e;
+  margin-right:15px;
+  text-decoration:none;
+}
+
+.copyright{
+  text-align:center;
+  margin-top:30px;
+  font-size:14px;
+  color:#777;
+}
+
+iframe{
+  width:100%;
+  height:200px;
+  border:0;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">LOGOMARCA</div>
+
+  <nav>
+    <ul id="menu">
+      <li><a href="#hero">Início</a></li>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#servicos">Serviços</a></li>
+      <li><a href="#portfolio">Portfólio</a></li>
+      <li><a href="#produtos">Produtos</a></li>
+      <li><a href="#depoimentos">Depoimentos</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+  </nav>
+
+  <div class="menu-toggle" id="toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</header>
+
+<!-- HERO -->
+
+<section class="hero" id="hero">
+  <div class="hero-text">
+    <h1>Luthier Wesley Rodrigues</h1>
+    <h2>Construção de instrumentos de cordas friccionadas, violinos, violas e cellos, reformas, consertos e ajustes.</h2>
+    <div class="hero-banner">Excelência artesanal para músicos de orquestras</div>
+  </div>
+  <div class="hero-img">
+    <!-- Foto busto aqui -->
+  </div>
+</section>
+
+<!-- SOBRE -->
+
+<section id="sobre">
+  <h2>Sobre o Luthier</h2>
+  <p>Especialista na construção e manutenção de instrumentos de cordas friccionadas. Mão de obra altamente especializada, foco absoluto na sonoridade, projeção e acabamento artesanal de padrão clássico.</p>
+</section>
+
+<!-- SERVIÇOS -->
+
+<section id="servicos">
+  <h2>Serviços</h2>
+  <div class="grid grid-3">
+    <div class="card">Construção de violinos</div>
+    <div class="card">Construção de violas</div>
+    <div class="card">Construção de cellos</div>
+    <div class="card">Restauração completa</div>
+    <div class="card">Troca de alma</div>
+    <div class="card">Ajuste de cavalete</div>
+    <div class="card">Colagem estrutural</div>
+    <div class="card">Verniz e acabamento</div>
+    <div class="card">Regulagem para orquestra</div>
+    <div class="card">Ajuste fino de sonoridade</div>
+  </div>
+</section>
+
+<!-- PRODUTOS -->
+
+<section id="produtos">
+  <h2>Produtos à Venda</h2>
+  <div class="grid grid-3">
+    <div class="card">
+      <img src="https://via.placeholder.com/300x200" width="100%">
+      <h3>Violino Artesanal</h3>
+      <p>Construção clássica europeia.</p>
+      <strong>R$ 12.500,00</strong>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/300x200" width="100%">
+      <h3>Viola de Arco</h3>
+      <p>Sonoridade equilibrada para orquestra.</p>
+      <strong>R$ 18.900,00</strong>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/300x200" width="100%">
+      <h3>Cello Profissional</h3>
+      <p>Projeção e profundidade sonora.</p>
+      <strong>R$ 35.000,00</strong>
+    </div>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS -->
+
+<section id="depoimentos">
+  <h2>Depoimentos</h2>
+  <div class="grid grid-2">
+    <div class="card">"Sonoridade impecável." – Ricardo Almeida</div>
+    <div class="card">"Profissional extremamente técnico." – Mariana Duarte</div>
+    <div class="card">"Meu violino ganhou nova vida." – Felipe Martins</div>
+    <div class="card">"Referência para músicos de orquestra." – Helena Costa</div>
+    <div class="card">"Trabalho artesanal refinado." – Eduardo Ramos</div>
+    <div class="card">"Regulagem perfeita." – Camila Nogueira</div>
+    <div class="card">"Padrão internacional." – André Soares</div>
+    <div class="card">"Excelente acabamento." – Laura Mendes</div>
+    <div class="card">"Som equilibrado e potente." – Bruno Carvalho</div>
+    <div class="card">"Confiança absoluta." – Sofia Albuquerque</div>
+  </div>
+</section>
+
+<!-- CONTATO -->
+
+<section id="contato">
+  <h2>Contato</h2>
+  <form id="contact-form">
+    <input type="text" name="user_name" placeholder="Nome" required>
+    <input type="email" name="user_email" placeholder="Email" required>
+    <textarea name="message" rows="5" placeholder="Mensagem"></textarea>
+    <button type="submit">Enviar Mensagem</button>
+  </form>
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <h3>Contato</h3>
+      <p>Telefone: (21) 99999-9999</p>
+      <p>Email: contato@luthierwesley.com</p>
+      <p>Endereço: Rua Exemplo, 123 - Rio de Janeiro</p>
+    </div>
+
+    <div>
+      <h3>Localização</h3>
+      <iframe src="https://maps.google.com/maps?q=Rio%20de%20Janeiro&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+    </div>
+
+    <div>
+      <h3>Redes Sociais</h3>
+      <div class="social">
+        <a href="#">Instagram</a>
+        <a href="#">Facebook</a>
+        <a href="#">WhatsApp</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="copyright">
+    © 2026 Luthier Wesley Rodrigues - Todos os direitos reservados
+  </div>
+</footer>
+
+<script>
+
+/* MENU */
+
+document.getElementById("toggle").addEventListener("click",()=>{
+  document.getElementById("menu").classList.toggle("active");
+});
+
+/* ANIMAÇÃO */
+
+const sections = document.querySelectorAll("section");
+
+window.addEventListener("scroll",()=>{
+  const trigger = window.innerHeight*0.85;
+  sections.forEach(section=>{
+    if(section.getBoundingClientRect().top < trigger){
+      section.classList.add("show");
+    }
+  });
+});
+
+/* EMAILJS */
+
+(function(){
+emailjs.init("SEU_PUBLIC_KEY");
+})();
+
+document.getElementById("contact-form")
+.addEventListener("submit",function(e){
+e.preventDefault();
+
+emailjs.sendForm("SEU_SERVICE_ID","SEU_TEMPLATE_ID",this)
+.then(function(){
+alert("Mensagem enviada com sucesso!");
+},function(error){
+alert("Erro ao enviar. Tente novamente.");
+});
+});
+
+</script>
+
+</body>
+</html>

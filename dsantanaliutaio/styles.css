@@ -148,7 +148,7 @@ section {
   display: flex;
   flex-direction: column;
   text-align: center;
-  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9)), url('/dsantanaliutaio/assets/img/bancada-instrumentos-wide.png');
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9)), url('/assets/img/bancada-instrumentos-wide.png');
   background-repeat: no-repeat;
   background-size: cover;
   color: var(--color-primary-1);
@@ -165,7 +165,7 @@ section {
 }
 
 #about {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url('/dsantanaliutaio/assets/img/img-build-by-demand.png');
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url('/assets/img/img-build-by-demand.png');
   /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); */
   display: flex;
   flex-direction: column;
@@ -217,7 +217,7 @@ section {
 
 #services {
   /* background: linear-gradient(540deg, var(--color-primary-3), var(--color-primary-4)); */
-  background-image: url("/dsantanaliutaio/assets/img/bancada-instrumentos-wide-3.png");
+  background-image: url("/assets/img/bancada-instrumentos-wide-3.png");
   color: var(--font-color-primary-light);
 }
 
