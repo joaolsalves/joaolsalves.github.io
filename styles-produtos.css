@@ -1,0 +1,98 @@
+@import url('/styles.css');
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.grid-produtos {
+    width: 90vw;
+    max-width: 1000px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+/* Responsivo */
+@media (max-width: 900px) {
+    .grid-produtos {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.card {
+    background: black;
+    border: 1px solid var(--dourado);
+    display: flex;
+    flex-direction: column;
+    transition: 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Imagem fixa */
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    padding: 16px;
+}
+
+.content {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+}
+
+/* Título com altura fixa */
+.content h3 {
+    margin: 0;
+    font-size: 18px;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    color: #000;
+}
+
+/* Preço com altura fixa */
+.price {
+    font-weight: bold;
+    font-size: 18px;
+    height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    color: var(--dourado);
+}
+
+/* Descrição controlada */
+.content p {
+    margin: 0;
+    font-size: 14px;
+    color: var(--dourado);
+    min-height: 40px;
+    overflow: hidden;
+}
+
+.btn-consulte {
+    background: var(--vermelho);
+    border: none;
+    padding: 5px 10px;
+    color: var(--dourado);
+    cursor: pointer;
+    transition: .3s;
+    text-decoration: none;
+    bottom: 20px;
+    right: 20px;
+    text-align: center;
+    border-radius: 1px;
+    font-weight: normal;
+    opacity: 0.7;
+}

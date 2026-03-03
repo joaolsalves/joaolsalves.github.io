@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Portfólio - Wesley Rodrigues</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+    }
+
+    header {
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    header p {
+      opacity: 0.8;
+    }
+
+    .portfolio {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .portfolio a {
+      display: block;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .portfolio a:hover {
+      transform: scale(1.05);
+    }
+
+    .portfolio img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #111;
+      color: white;
+      margin-top: 40px;
+    }
+
+    footer a {
+      color: #00aced;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Portfólio</h1>
+  <p>@wesleyrodrigues3355</p>
+</header>
+
+<section class="portfolio" id="portfolio">
+  <!-- Imagens serão inseridas via JavaScript -->
+</section>
+
+<footer>
+  <p>Veja mais em 
+    <a href="https://www.instagram.com/wesleyrodrigues3355/" target="_blank">
+      @wesleyrodrigues3355
+    </a>
+  </p>
+</footer>
+
+<script>
+  // SIMULAÇÃO de posts do Instagram
+  // Em projeto real, esses dados viriam da API do Instagram
+  const instagramPosts = [
+    {
+      image: "https://picsum.photos/500?random=1",
+      link: "https://www.instagram.com/wesleyrodrigues3355/"
+    },
+    {
+      image: "https://picsum.photos/500?random=2",
+      link: "https://www.instagram.com/wesleyrodrigues3355/"
+    },
+    {
+      image: "https://picsum.photos/500?random=3",
+      link: "https://www.instagram.com/wesleyrodrigues3355/"
+    },
+    {
+      image: "https://picsum.photos/500?random=4",
+      link: "https://www.instagram.com/wesleyrodrigues3355/"
+    },
+    {
+      image: "https://picsum.photos/500?random=5",
+      link: "https://www.instagram.com/wesleyrodrigues3355/"
+    },
+    {
+      image: "https://picsum.photos/500?random=6",
+      link: "https://www.instagram.com/wesleyrodrigues3355/"
+    }
+  ];
+
+  const portfolio = document.getElementById("portfolio");
+
+  instagramPosts.forEach(post => {
+    const a = document.createElement("a");
+    a.href = post.link;
+    a.target = "_blank";
+
+    const img = document.createElement("img");
+    img.src = post.image;
+
+    a.appendChild(img);
+    portfolio.appendChild(a);
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Card com Galeria</title>
+
+<style>
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f4f6f9;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.card {
+  width: 380px;
+  background: #fff;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+  overflow: hidden;
+}
+
+.gallery-wrapper {
+  position: relative;
+}
+
+.gallery {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* Firefox */
+}
+
+.gallery::-webkit-scrollbar {
+  display: none; /* Chrome */
+}
+
+.gallery img {
+  width: 100%;
+  min-width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  border: none;
+  padding: 10px 14px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: rgba(0,0,0,0.7);
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.card-title {
+  padding: 20px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #111;
+  text-align: center;
+}
+</style>
+
+</head>
+<body>
+
+<div class="card">
+  <div class="gallery-wrapper">
+    <div class="gallery" id="gallery">
+      <img src="https://picsum.photos/id/1015/600/400">
+      <img src="https://picsum.photos/id/1016/600/400">
+      <img src="https://picsum.photos/id/1018/600/400">
+      <img src="https://picsum.photos/id/1020/600/400">
+      <img src="https://picsum.photos/id/1024/600/400">
+    </div>
+    <button class="prev" onclick="scrollGallery(-1)">‹</button>
+    <button class="next" onclick="scrollGallery(1)">›</button>
+  </div>
+  <div class="card-title">Violão Artesanal Premium</div>
+</div>
+
+<script>
+function scrollGallery(direction) {
+  const gallery = document.getElementById("gallery");
+  const width = gallery.clientWidth;
+  gallery.scrollBy({
+    left: width * direction,
+    behavior: "smooth"
+  });
+}
+</script>
+
+</body>
+</html>

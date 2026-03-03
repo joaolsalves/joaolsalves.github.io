@@ -22,77 +22,11 @@
 
     <header id="header">
         <div class="logo">Luthier Wesley Rodrigues</div>
-        <nav>
-            <div class="menu-toggle" id="toggle">☰</div>
-            <ul id="menu">
-                <li><a href="#hero">Início</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#portfolio">Portfólio</a></li>
-                <li><a href="#produtos">Vendas</a></li>
-                <li><a href="#depoimentos">Depoimentos</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
+        
     </header>
 
     <!-- HERO -->
-    <section class="hero" id="hero">
-        <video autoplay muted loop>
-
-            <source src="/luthierwesleyrodrigues/video-violino-hero1.mp4" type="video/mp4">
-
-        </video>
-        <div class="hero-content">
-            <h1>Luthier Wesley Rodrigues</h1>
-            <p>Construção de instrumentos de cordas friccionadas com mão de obra especializada para músicos de
-                orquestra.</p>
-            <!-- <div class="busto"></div> -->
-        </div>
-    </section>
-
-    <section id="sobre">
-        <h2>Sobre o Luthier</h2>
-        <p style="max-width:800px;margin:auto;text-align:center;">
-            Especialista em violinos, violas e cellos. Excelência artesanal em construção, reformas, ajustes e
-            restaurações.
-        </p>
-    </section>
-
-    <section id="servicos" class="services">
-        <h2>Serviços</h2>
-        <ul>
-            <li>Construção de Violinos</li>
-            <li>Construção de Violas</li>
-            <li>Construção de Cellos</li>
-            <li>Restauração Completa</li>
-            <li>Reformas Estruturais</li>
-            <li>Ajuste de Alma</li>
-            <li>Regulagem de Cavalete</li>
-            <li>Troca de Espelho</li>
-            <li>Envernizamento Artesanal</li>
-            <li>Manutenção Preventiva</li>
-        </ul>
-    </section>
-
-    <section id="portfolio">
-        <h2>Portfólio</h2>
-        <div class="grid-portfolio">
-            <img src="/luthierwesleyrodrigues/img-portfolio-1.png" alt="Trabalho 1">
-            <img src="/luthierwesleyrodrigues/img-portfolio-2.png" alt="Trabalho 2">
-            <img src="/luthierwesleyrodrigues/img-portfolio-3.png" alt="Trabalho 3">
-            <img src="/luthierwesleyrodrigues/img-portfolio-4.png" alt="Trabalho 4">
-            <img src="/luthierwesleyrodrigues/img-portfolio-5.png" alt="Trabalho 5">
-            <img src="/luthierwesleyrodrigues/img-portfolio-6.png" alt="Trabalho 6">
-        </div>
-
-        <br>
-
-        <a href="https://www.instagram.com/wesleyrodrigues3355" target="_blank" rel="noopener noreferrer"
-            class="btn-mais">Veja mais
-        </a>
-    </section>
-
+    
     <section id="produtos">
         <h2>Instrumentos à Venda</h2>
         <div class="wrapper">
@@ -128,8 +62,6 @@
                     </div>
                 </div>
 
-
-
                 <div class="card">
                     <img src="https://picsum.photos/500/400?4">
                     <div class="content">
@@ -164,25 +96,9 @@
 
 
         </div>
-        <a href="./vendas.html" target="_blank" rel="noopener noreferrer"
-            class="btn-mais">Veja mais
-        </a>
+
     </section>
 
-    <section id="depoimentos">
-        <h2>Depoimentos</h2>
-        <div class="testimonial" id="testimonial"></div>
-    </section>
-
-    <section id="contato">
-        <h2>Contato</h2>
-        <form id="contact-form">
-            <input type="text" name="name" placeholder="Nome" required>
-            <input type="email" name="email" placeholder="Email" required>
-            <textarea name="message" rows="5" placeholder="Mensagem"></textarea>
-            <button type="submit">Enviar</button>
-        </form>
-    </section>
 
     <footer>
         <p>Rua Alameda Júlio Calil nº 468 <br>
@@ -213,9 +129,14 @@
         <p>© 2026 Luthier Wesley Rodrigues</p>
     </footer>
 
-    <script>
+<script>
 
-        /* HEADER SCROLL */
+window.addEventListener("load", function () {
+  const section = document.querySelector("section");
+  section.classList.add("visible");
+});
+
+/* HEADER SCROLL */
         window.addEventListener("scroll", () => {
             document.getElementById("header").classList.toggle("scrolled", window.scrollY > 50);
         });
@@ -236,45 +157,7 @@
             });
         }, { threshold: 0.2 });
         sections.forEach(sec => observer.observe(sec));
-
-        /* DEPOIMENTOS */
-        const depoimentos = [
-            "Sonoridade impecável – Eduardo Almeida",
-            "Acabamento refinado – Mariana Lopes",
-            "Meu cello ganhou nova vida – Carlos Mendes",
-            "Precisão técnica admirável – Fernanda Rocha",
-            "Excelência artesanal – Ricardo Martins",
-            "Recomendo a todos músicos – Juliana Prado",
-            "Ajuste perfeito – André Farias",
-            "Qualidade superior – Beatriz Campos",
-            "Detalhes impressionantes – Paulo Nogueira",
-            "O melhor luthier que já conheci – Camila Torres"
-        ];
-
-        let i = 0;
-        const box = document.getElementById("testimonial");
-        function trocar() {
-            box.style.opacity = 0;
-            setTimeout(() => {
-                box.innerText = depoimentos[i];
-                box.style.opacity = 1;
-                i = (i + 1) % depoimentos.length;
-            }, 500);
-        }
-        trocar();
-        setInterval(trocar, 8000);
-
-        /* EMAILJS */
-        (function () { emailjs.init("YOUR_PUBLIC_KEY"); })();
-        document.getElementById("contact-form").addEventListener("submit", function (e) {
-            e.preventDefault();
-            emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", this)
-                .then(() => alert("Mensagem enviada!"),
-                    () => alert("Erro ao enviar."));
-        });
-
-    </script>
-
+</script>
 </body>
 
 </html>
