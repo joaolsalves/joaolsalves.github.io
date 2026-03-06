@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="container-cards"></div>
+
+    <script>
+        const cards = [
+            {
+                imagem: "https://picsum.photos/300/200?1",
+                texto: "Este é o primeiro card com uma descrição simples e objetiva.",
+                altdesc: "Imagem ilustrativa do primeiro card"
+            },
+            {
+                imagem: "https://picsum.photos/300/200?2",
+                texto: "Segundo card com um pequeno parágrafo explicativo.",
+                altdesc: "Imagem ilustrativa do segundo card"
+
+            },
+            {
+                imagem: "https://picsum.photos/300/200?3",
+                texto: "Terceiro card apresentando mais uma informação relevante.",
+                altdesc: 'Imagem ilustrativa do terceiro card'
+            }
+        ];
+
+        const container = document.getElementById("container-cards");
+
+        cards.forEach(card => {
+            const div = document.createElement("div");
+            div.classList.add("card");
+
+            div.innerHTML = `
+    <img src="${card.imagem}" alt="${card.altdesc}">
+    <p>${card.texto}</p>
+  `;
+
+            container.appendChild(div);
+        });
+
+    </script>
+</body>
+
+</html>

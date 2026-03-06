@@ -1,0 +1,33 @@
+/* Responsivo */
+@media(max-width:900px) {
+    .services ul {
+        columns: 1;
+    }
+    
+    nav ul {
+        position: fixed;
+        right: -100%;
+        top: 70px;
+        flex-direction: column;
+        background: #000;
+        width: auto;
+        height: auto;
+        padding: 40px;
+        transition: .4s;
+        opacity: 0.88;
+    }
+
+    nav ul.active {
+        right: 0;
+    }
+
+    .menu-toggle {
+        display: block;
+        text-align: end;
+    }
+
+    .grid-produtos {
+        display: grid;
+    }
+
+}

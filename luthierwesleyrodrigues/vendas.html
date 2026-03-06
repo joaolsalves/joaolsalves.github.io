@@ -7,8 +7,9 @@
     <title>Luthier Wesley Rodrigues</title>
 
     <!-- CSS externo -->
-    <link rel="stylesheet" href="/styles.css" />
-    <link rel="stylesheet" href="/styles-produtos.css" />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link rel="stylesheet" href="/assets/css/styles-produtos.css" />
+    <link rel="stylesheet" href="/assets/css/responsive.css" />
 
     <link
         href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Libre+Baskerville:wght@400;700&display=swap"
@@ -22,81 +23,21 @@
 
     <header id="header">
         <div class="logo">Luthier Wesley Rodrigues</div>
-        
+
     </header>
 
-    <!-- HERO -->
-    
-    <section id="produtos">
+    <section id="produtos" class="cl-produtos">
         <h2>Instrumentos à Venda</h2>
+
         <div class="wrapper">
-            <div class="grid-produtos">
 
-                <div class="card">
-                    <img src="https://picsum.photos/500/400?3">
-                    <div class="content">
-                        <p>Alta performance e qualidade superior.</p>
-                        <div class="price">Preço: <a href="https://wa.me/5517988418895"
-                                target="_blank" rel="noopener noreferrer" class="btn-consulte">Consulte
-                            </a></div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="https://picsum.photos/500/400?1">
-                    <div class="content">
-                        <p>Alta performance e qualidade superior.</p>
-                        <div class="price">Preço: <a href="https://wa.me/5517988418895"
-                                target="_blank" rel="noopener noreferrer" class="btn-consulte">Consulte
-                            </a></div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="https://picsum.photos/500/400?2">
-                    <div class="content">
-                        <p>Alta performance e qualidade superior.</p>
-                        <div class="price">Preço: <a href="https://wa.me/5517988418895"
-                                target="_blank" rel="noopener noreferrer" class="btn-consulte">Consulte
-                            </a></div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="https://picsum.photos/500/400?4">
-                    <div class="content">
-                        <p>Alta performance e qualidade superior.</p>
-                        <div class="price">Preço: <a href="https://wa.me/5517988418895"
-                                target="_blank" rel="noopener noreferrer" class="btn-consulte">Consulte
-                            </a></div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="https://picsum.photos/500/400?5">
-                    <div class="content">
-                        <p>Alta performance e qualidade superior.</p>
-                        <div class="price">Preço: <a href="https://wa.me/5517988418895"
-                                target="_blank" rel="noopener noreferrer" class="btn-consulte">Consulte
-                            </a></div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="https://picsum.photos/500/400?6">
-                    <div class="content">
-                        <p>Alta performance e qualidade superior.</p>
-                        <div class="price">Preço: <a href="https://wa.me/5517988418895"
-                                target="_blank" rel="noopener noreferrer" class="btn-consulte">Consulte
-                            </a></div>
-                    </div>
-                </div>
-
-            </div>
-
+            <div id="container-cards"></div>
 
         </div>
 
+
+        <!-- <a href="./vendas.html" target="_blank" rel="noopener noreferrer" class="btn-mais">Veja mais
+        </a> -->
     </section>
 
 
@@ -129,35 +70,24 @@
         <p>© 2026 Luthier Wesley Rodrigues</p>
     </footer>
 
-<script>
+    <script src="./assets/js/script-cards-vendas.js"></script>
 
-window.addEventListener("load", function () {
-  const section = document.querySelector("section");
-  section.classList.add("visible");
-});
+    <script>
 
-/* HEADER SCROLL */
-        window.addEventListener("scroll", () => {
-            document.getElementById("header").classList.toggle("scrolled", window.scrollY > 50);
-        });
+        function mostrarElemento(classe) {
+            const elementos = document.querySelectorAll(classe);
 
-        /* MENU */
-        const toggle = document.getElementById("toggle");
-        const menu = document.getElementById("menu");
-        toggle.onclick = () => menu.classList.toggle("active");
-        document.querySelectorAll("#menu a").forEach(link => {
-            link.onclick = () => menu.classList.remove("active");
-        });
-
-        /* ANIMAÇÃO AO ROLAR */
-        const sections = document.querySelectorAll("section");
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) entry.target.classList.add("visible");
+            elementos.forEach(function (el) {
+                el.style.opacity = "1";
             });
-        }, { threshold: 0.2 });
-        sections.forEach(sec => observer.observe(sec));
-</script>
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            mostrarElemento(".cl-produtos");
+        });
+
+    </script>
+
 </body>
 
 </html>

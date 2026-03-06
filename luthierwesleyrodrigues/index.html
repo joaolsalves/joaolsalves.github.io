@@ -7,14 +7,16 @@
     <title>Luthier Wesley Rodrigues</title>
 
     <!-- CSS externo -->
-    <link rel="stylesheet" href="/styles.css" />
-    <link rel="stylesheet" href="/styles-produtos.css" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link rel="stylesheet" href="./assets/css/styles-produtos.css" />
+    <link rel="stylesheet" href="./assets/css/responsive.css" />
 
     <link
         href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Libre+Baskerville:wght@400;700&display=swap"
         rel="stylesheet">
 
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
 
 </head>
 
@@ -40,7 +42,7 @@
     <section class="hero" id="hero">
         <video autoplay muted loop>
 
-            <source src="/luthierwesleyrodrigues/video-violino-hero1.mp4" type="video/mp4">
+            <source src="/assets/vid/video-violino-hero1.mp4" type="video/mp4">
 
         </video>
         <div class="hero-content">
@@ -78,12 +80,12 @@
     <section id="portfolio">
         <h2>Portfólio</h2>
         <div class="grid-portfolio">
-            <img src="/luthierwesleyrodrigues/img-portfolio-1.png" alt="Trabalho 1">
-            <img src="/luthierwesleyrodrigues/img-portfolio-2.png" alt="Trabalho 2">
-            <img src="/luthierwesleyrodrigues/img-portfolio-3.png" alt="Trabalho 3">
-            <img src="/luthierwesleyrodrigues/img-portfolio-4.png" alt="Trabalho 4">
-            <img src="/luthierwesleyrodrigues/img-portfolio-5.png" alt="Trabalho 5">
-            <img src="/luthierwesleyrodrigues/img-portfolio-6.png" alt="Trabalho 6">
+            <img src="./assets/img/img-portfolio-1.png" alt="Trabalho 1">
+            <img src="./assets/img/img-portfolio-2.png" alt="Trabalho 2">
+            <img src="./assets/img/img-portfolio-3.png" alt="Trabalho 3">
+            <img src="./assets/img/img-portfolio-4.png" alt="Trabalho 4">
+            <img src="./assets/img/img-portfolio-5.png" alt="Trabalho 5">
+            <img src="./assets/img/img-portfolio-6.png" alt="Trabalho 6">
         </div>
 
         <br>
@@ -91,81 +93,19 @@
         <a href="https://www.instagram.com/wesleyrodrigues3355" target="_blank" rel="noopener noreferrer"
             class="btn-mais">Veja mais
         </a>
-    </section>
+    </section>   
 
     <section id="produtos">
         <h2>Instrumentos à Venda</h2>
+
         <div class="wrapper">
-            <div class="grid-produtos">
 
-                <div class="card">
-                    <img src="https://picsum.photos/500/400?3">
-                    <div class="content">
-                        <p>Alta performance e qualidade superior.</p>
-                        <div class="price">Preço: <a href="https://wa.me/5517988418895"
-                                target="_blank" rel="noopener noreferrer" class="btn-consulte">Consulte
-                            </a></div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="https://picsum.photos/500/400?1">
-                    <div class="content">
-                        <p>Alta performance e qualidade superior.</p>
-                        <div class="price">Preço: <a href="https://wa.me/5517988418895"
-                                target="_blank" rel="noopener noreferrer" class="btn-consulte">Consulte
-                            </a></div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="https://picsum.photos/500/400?2">
-                    <div class="content">
-                        <p>Alta performance e qualidade superior.</p>
-                        <div class="price">Preço: <a href="https://wa.me/5517988418895"
-                                target="_blank" rel="noopener noreferrer" class="btn-consulte">Consulte
-                            </a></div>
-                    </div>
-                </div>
-
-
-
-                <div class="card">
-                    <img src="https://picsum.photos/500/400?4">
-                    <div class="content">
-                        <p>Alta performance e qualidade superior.</p>
-                        <div class="price">Preço: <a href="https://wa.me/5517988418895"
-                                target="_blank" rel="noopener noreferrer" class="btn-consulte">Consulte
-                            </a></div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="https://picsum.photos/500/400?5">
-                    <div class="content">
-                        <p>Alta performance e qualidade superior.</p>
-                        <div class="price">Preço: <a href="https://wa.me/5517988418895"
-                                target="_blank" rel="noopener noreferrer" class="btn-consulte">Consulte
-                            </a></div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="https://picsum.photos/500/400?6">
-                    <div class="content">
-                        <p>Alta performance e qualidade superior.</p>
-                        <div class="price">Preço: <a href="https://wa.me/5517988418895"
-                                target="_blank" rel="noopener noreferrer" class="btn-consulte">Consulte
-                            </a></div>
-                    </div>
-                </div>
-
-            </div>
-
+            <div id="container-cards"></div>
 
         </div>
-        <a href="./vendas.html" target="_blank" rel="noopener noreferrer"
-            class="btn-mais">Veja mais
+
+
+        <a href="./vendas.html" target="_blank" rel="noopener noreferrer" class="btn-mais">Veja mais
         </a>
     </section>
 
@@ -173,6 +113,15 @@
         <h2>Depoimentos</h2>
         <div class="testimonial" id="testimonial"></div>
     </section>
+
+        <div class="cl-ctn-cta">
+        <h1>Está pronto para começar?</h1>
+        <p>Entre em contato agora e vamos conversar sobre como podemos ajudar com seu instrumento</p>
+
+        <a href="https://wa.me/5517988418895" target="_blank" rel="noopener noreferrer" class="cl-btn-entre-contato">Entre
+        em contato agora mesmo!</a>
+        
+    </div>
 
     <section id="contato">
         <h2>Contato</h2>
@@ -197,8 +146,13 @@
 
         <br>
 
+        <a href="mailto:wesleyoliveira504@yahoo.com.br" class="btn-rede-social">Email:
+            wesleyoliveira504@yahoo.com.br</a>
+
+        <br><br>
+
         <div class="social">
-            <a href="https://www.instagram.com/wesleyrodrigues3355" target="_blank" rel="noopener noreferrer class="
+            <a href="https://www.instagram.com/wesleyrodrigues3355" target="_blank" rel="noopener noreferrer" class="
                 btn-rede-social">Instagram</a>
             <a href="https://www.facebook.com/wesley.rodrigues.267459" target="_blank"
                 rel="noopener noreferrer">Facebook</a>
@@ -213,67 +167,9 @@
         <p>© 2026 Luthier Wesley Rodrigues</p>
     </footer>
 
-    <script>
 
-        /* HEADER SCROLL */
-        window.addEventListener("scroll", () => {
-            document.getElementById("header").classList.toggle("scrolled", window.scrollY > 50);
-        });
-
-        /* MENU */
-        const toggle = document.getElementById("toggle");
-        const menu = document.getElementById("menu");
-        toggle.onclick = () => menu.classList.toggle("active");
-        document.querySelectorAll("#menu a").forEach(link => {
-            link.onclick = () => menu.classList.remove("active");
-        });
-
-        /* ANIMAÇÃO AO ROLAR */
-        const sections = document.querySelectorAll("section");
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) entry.target.classList.add("visible");
-            });
-        }, { threshold: 0.2 });
-        sections.forEach(sec => observer.observe(sec));
-
-        /* DEPOIMENTOS */
-        const depoimentos = [
-            "Sonoridade impecável – Eduardo Almeida",
-            "Acabamento refinado – Mariana Lopes",
-            "Meu cello ganhou nova vida – Carlos Mendes",
-            "Precisão técnica admirável – Fernanda Rocha",
-            "Excelência artesanal – Ricardo Martins",
-            "Recomendo a todos músicos – Juliana Prado",
-            "Ajuste perfeito – André Farias",
-            "Qualidade superior – Beatriz Campos",
-            "Detalhes impressionantes – Paulo Nogueira",
-            "O melhor luthier que já conheci – Camila Torres"
-        ];
-
-        let i = 0;
-        const box = document.getElementById("testimonial");
-        function trocar() {
-            box.style.opacity = 0;
-            setTimeout(() => {
-                box.innerText = depoimentos[i];
-                box.style.opacity = 1;
-                i = (i + 1) % depoimentos.length;
-            }, 500);
-        }
-        trocar();
-        setInterval(trocar, 8000);
-
-        /* EMAILJS */
-        (function () { emailjs.init("YOUR_PUBLIC_KEY"); })();
-        document.getElementById("contact-form").addEventListener("submit", function (e) {
-            e.preventDefault();
-            emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", this)
-                .then(() => alert("Mensagem enviada!"),
-                    () => alert("Erro ao enviar."));
-        });
-
-    </script>
+    <script src="./assets/js/script-cards.js"></script>
+    <script src="./assets/js/script.js"></script>
 
 </body>
 
